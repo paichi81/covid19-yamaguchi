@@ -9,11 +9,13 @@
         mdi-menu
       </v-icon>
       <nuxt-link :to="localePath('/')" class="SideNavigation-HeadingLink">
-        <div class="SideNavigation-Logo">
-          <img src="/logo.svg" :alt="$t('東京都')" />
-        </div>
         <h1 class="SideNavigation-Heading">
-          {{ $t('新型コロナウイルス感染症') }}<br />{{ $t('対策サイト') }}
+          <div class="SideNavigation-Logo">
+            <img src="/logo.svg" :alt="$t('山口県')" />
+          </div>
+          {{ $t('新型コロナウイルス感染症') }}<br />{{
+            $t('対策サイト（非公式）')
+          }}
         </h1>
       </nuxt-link>
     </header>
@@ -39,12 +41,13 @@
           </v-container>
         </v-list>
         <div class="SideNavigation-LanguageMenu">
-          <LanguageSelector />
+          <!-- <LanguageSelector /> -->
         </div>
       </nav>
       <v-footer class="SideNavigation-Footer">
         <div class="SideNavigation-SocialLinkContainer">
-          <a
+          <!--
+		  <a
             href="https://line.me/R/ti/p/%40822sysfc"
             target="_blank"
             rel="noopener"
@@ -65,15 +68,17 @@
           >
             <img src="/facebook.png" alt="Facebook" />
           </a>
+		  -->
           <a
-            href="https://github.com/tokyo-metropolitan-gov/covid19"
+            href="https://github.com/nishidayoshikatsu/covid19-yamaguchi"
             target="_blank"
             rel="noopener"
           >
             <img src="/github.png" alt="GitHub" />
           </a>
         </div>
-        <small class="SideNavigation-Copyright">
+        <!--
+		<small class="SideNavigation-Copyright">
           {{ $t('このサイトの内容物は') }}
           <a
             rel="license"
@@ -86,6 +91,7 @@
           <br />
           2020 Tokyo Metropolitan Government
         </small>
+		-->
       </v-footer>
     </div>
   </div>
@@ -95,12 +101,12 @@
 
 <script>
 import ListItem from '@/components/ListItem'
-import LanguageSelector from '@/components/LanguageSelector.vue'
+// import LanguageSelector from '@/components/LanguageSelector.vue'
 
 export default {
   components: {
-    ListItem,
-    LanguageSelector
+    ListItem
+    // LanguageSelector
   },
   props: {
     isNaviOpen: {
@@ -113,13 +119,21 @@ export default {
       return [
         {
           icon: 'mdi-chart-timeline-variant',
-          title: this.$t('都内の最新感染動向'),
+          title: this.$t('山口県内の最新感染動向'),
           link: this.localePath('/')
         },
-        {
+        /*
+		{
           icon: 'covid',
           title: this.$t('新型コロナウイルス感染症が心配なときに'),
           link: this.localePath('/flow'),
+          divider: true
+		},
+		*/
+        {
+          title: this.$t('新型コロナウイルスに関連する相談窓口'),
+          link:
+            'https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html',
           divider: true
         },
         {
@@ -129,37 +143,53 @@ export default {
         },
         {
           icon: 'mdi-account-multiple',
-          title: this.$t('都民の皆様へ'),
-          link: 'https://www.metro.tokyo.lg.jp/tosei/tosei/news/2019-ncov.html'
+          title: this.$t('山口県民の皆様へ'),
+          link:
+            'https://www.pref.yamaguchi.lg.jp/cms/a11000/korona_kanren/kanren_link.html'
         },
         {
           icon: 'mdi-domain',
           title: this.$t('企業の皆様・はたらく皆様へ'),
-          link: this.localePath('/worker'),
-          divider: true
+          link:
+            'https://www.pref.yamaguchi.lg.jp/cms/a16300/kinyuu/202002210001.html'
+          // link: this.localePath('/worker'),
+          // divider: true
         },
         {
-          title: this.$t('東京都新型コロナウイルス感染症対策本部報'),
+          title: this.$t(
+            '新型コロナウイルス発生に伴う県主催イベント等の中止・延期について'
+          ),
           link:
-            'https://www.bousai.metro.tokyo.lg.jp/taisaku/saigai/1007261/index.html'
+            'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/202002250001.html'
         },
         {
-          title: this.$t('東京都主催等 中止又は延期するイベント等'),
+          title: this.$t(
+            '新型コロナウイルス発生に伴う県有施設等の休館等について'
+          ),
           link:
-            'https://www.seisakukikaku.metro.tokyo.lg.jp/information/event00.html'
+            'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/202002280001.html'
         },
         {
           title: this.$t('知事からのメッセージ'),
           link:
-            'https://www.metro.tokyo.lg.jp/tosei/governor/governor/katsudo/2020/03/03_00.html'
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/chijiroom/top-page.html'
         },
         {
           title: this.$t('当サイトについて'),
           link: this.localePath('/about')
         },
         {
-          title: this.$t('東京都公式ホームページ'),
-          link: 'https://www.metro.tokyo.lg.jp/',
+          title: this.$t('山口県公式ホームページ'),
+          link: 'https://www.pref.yamaguchi.lg.jp/'
+        },
+        {
+          title: this.$t('山口県感染症情報センターホームページ'),
+          link:
+            'http://kanpoken.pref.yamaguchi.lg.jp/jyoho/page5-7/page5-7-31.html',
+          divider: true
+        },
+        {
+          title: this.$t('※当サイトは山口県内外の有志が開設したものです。'),
           divider: true
         }
       ]
@@ -189,11 +219,11 @@ export default {
     padding: 1.25em 0 1.25em 1.25em;
     align-items: center;
     @include lessThan($small) {
-      padding: 7px 0 7px 20px;
+      padding: 7px 10px;
     }
   }
   &-HeadingIcon {
-    margin-right: 16px;
+    margin-right: 10px;
   }
   &-HeadingLink {
     @include lessThan($small) {
@@ -203,13 +233,14 @@ export default {
     text-decoration: none;
   }
   &-ListContainerIcon {
+    width: 21px;
     margin: 24px 16px 0;
   }
   &-ListItemContainer {
     padding: 2px 20px;
   }
   &-Logo {
-    margin: 20px 16px 0 0;
+    margin: 5px 16px 15px 0;
     width: 110px;
     @include lessThan($small) {
       margin-top: 0;
@@ -272,6 +303,11 @@ export default {
     background-color: $white;
     height: 100%;
     overflow-y: scroll;
+  }
+}
+@include lessThan($tiny) {
+  .sp-logo {
+    width: 100px;
   }
 }
 @include largerThan($small) {

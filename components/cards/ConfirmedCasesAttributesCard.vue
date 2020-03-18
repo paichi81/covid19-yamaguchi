@@ -7,7 +7,9 @@
       :chart-option="{}"
       :date="Data.patients.date"
       :info="sumInfoOfPatients"
-      :url="'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'"
+      :url="
+        'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/koronahassei.html'
+      "
     />
   </v-col>
 </template>
@@ -27,7 +29,8 @@
     "湖南省長沙市": "湖南省長沙市",
     "湖北省武漢市": "湖北省武漢市",
     "{age}代": "{age}代",
-    "10歳未満": "10歳未満",
+	"10歳未満": "10歳未満",
+	"小学生": "小学生",
     "男性": "男性",
     "女性": "女性",
     "退院※": "退院※"
@@ -163,6 +166,8 @@ export default {
 
       if (row['年代'] === '10歳未満') {
         row['年代'] = this.$t('10歳未満')
+      } else if (row['年代'] === '小学生') {
+        row['年代'] = this.$t('小学生')
       } else {
         const age = row['年代'].substring(0, 2)
         row['年代'] = this.$t('{age}代', { age })

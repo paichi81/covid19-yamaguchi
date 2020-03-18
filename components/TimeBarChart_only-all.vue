@@ -25,11 +25,11 @@
 
 <script>
 import DataView from '@/components/DataView.vue'
-import DataSelector from '@/components/DataSelector.vue'
+// import DataSelector from '@/components/DataSelector.vue'
 import DataViewBasicInfoPanel from '@/components/DataViewBasicInfoPanel.vue'
 
 export default {
-  components: { DataView, DataSelector, DataViewBasicInfoPanel },
+  components: { DataView, DataViewBasicInfoPanel },
   props: {
     title: {
       type: String,

@@ -6,13 +6,35 @@
     <TextCard>
       {{
         $t(
-          '当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、東京都が開設したものです。'
+          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、山口県内外の有志が開設したものです。'
         )
       }}<br />
       <br />
+      <i18n
+        path="複製・改変が許されたオープンソースライセンスで公開されている、{covid19-web}の{covid19-github}を利用しています。"
+      >
+        <a
+          href="https://stopcovid19.metro.tokyo.lg.jp/"
+          target="_blank"
+          rel="noopener"
+          place="covid19-web"
+        >
+          {{ $t('東京都公式新型コロナウイルス対策サイト') }}
+        </a>
+        <a
+          href="https://github.com/tokyo-metropolitan-gov/covid19"
+          target="_blank"
+          rel="noopener"
+          place="covid19-github"
+        >
+          {{ $t('仕組み') }}
+        </a>
+      </i18n>
+      <br />
+      <br />
       {{
         $t(
-          '東京都による公式情報と客観的な数値をわかりやすく伝えることで、東京都にお住まいの方や、東京都内に拠点を持つ企業の方、東京都を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。'
+          '山口県による公式情報と客観的な数値をわかりやすく伝えることで、山口県にお住まいの方や、山口県内に拠点を持つ企業の方、山口県を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。'
         )
       }}
     </TextCard>
@@ -122,7 +144,7 @@
     <TextCard :title="$t('免責事項')">
       {{
         $t(
-          '当サイトに掲載されている情報の正確性については万全を期していますが、東京都は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。'
+          '当サイトに掲載されている情報の正確性については万全を期していますが、山口県は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。'
         )
       }}<br />
       <br />
@@ -138,6 +160,8 @@
         )
       }}
     </TextCard>
+
+    <!--
     <TextCard :title="$t('データについて')">
       <i18n
         tag="p"
@@ -153,6 +177,8 @@
         </a>
       </i18n>
     </TextCard>
+	-->
+
     <TextCard :title="$t('ソースコードについて')">
       {{
         $t(
@@ -161,7 +187,7 @@
       }}
       <i18n path="詳しくは、{githubRepo}をご確認ください。">
         <a
-          href="https://github.com/tokyo-metropolitan-gov/covid19"
+          href="https://github.com/nishidayoshikatsu/covid19-yamaguchi"
           target="_blank"
           rel="noopener"
           place="githubRepo"
@@ -170,10 +196,13 @@
         </a>
       </i18n>
     </TextCard>
-    <TextCard :title="$t('お問い合わせ先（都のHPサイトポリシーについて）')">
+    <TextCard :title="$t('お問い合わせ先')">
+      <!--
       {{ $t('東京都生活文化局広報広聴部広報課') }}<br />
       {{ $t('電話') }}:
       <a href="tel:03-5388-3085">03-5388-3085</a>
+	  -->
+      {{ $t('※準備中') }}
     </TextCard>
   </div>
 </template>

@@ -1,14 +1,15 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
-    <time-stacked-bar-chart
-      :title="$t('検査実施数')"
+    <time-bar-chart-only-all
+      :title="$t('検査実施数（累計）')"
       :title-id="'number-of-tested'"
       :chart-id="'time-stacked-bar-chart-inspections'"
       :chart-data="inspectionsGraph"
       :date="Data.inspections_summary.date"
-      :items="inspectionsItems"
-      :labels="inspectionsLabels"
       :unit="$t('件.tested')"
+      :url="
+        'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/ncorona.html'
+      "
     />
     <!-- 件.tested = 検査数 -->
   </v-col>
@@ -17,7 +18,8 @@
 <i18n>
 {
   "ja": {
-    "検査実施数": "検査実施数",
+	"検査実施数": "検査実施数",
+	"累計": "累計",
     "都内": "都内",
     "都内発生（疑い例・接触者調査）": "都内発生（疑い例・接触者調査）",
     "その他（チャーター便・クルーズ船）": "その他（チャーター便・クルーズ船）",
@@ -70,6 +72,7 @@
 
 <script>
 import Data from '@/data/data.json'
+/*
 import TimeStackedBarChart from '@/components/TimeStackedBarChart.vue'
 
 export default {
@@ -93,6 +96,25 @@ export default {
       inspectionsGraph,
       inspectionsItems,
       inspectionsLabels
+    }
+    return data
+  }
+}
+*/
+import formatGraph from '@/utils/formatGraph'
+import TimeBarChartOnlyAll from '@/components/TimeBarChart_only-all.vue'
+
+export default {
+  components: {
+    TimeBarChartOnlyAll
+  },
+  data() {
+    // 検査数グラフ
+    const inspectionsGraph = formatGraph(Data.inspections_summary.data)
+
+    const data = {
+      Data,
+      inspectionsGraph
     }
     return data
   }
