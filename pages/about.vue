@@ -202,9 +202,7 @@
       {{ $t('電話') }}:
       <a href="tel:03-5388-3085">03-5388-3085</a>
 	  -->
-      <i18n
-        path="当サイトについてのお問い合わせは{facebookYamaguchi}までお願いします。"
-      >
+      <i18n path="facebook: {facebookYamaguchi}">
         <a
           href="https://www.facebook.com/stopcovid19yamaguchi/"
           target="_blank"
@@ -216,6 +214,17 @@
               '山口県 新型コロナウイルス感染症対策サイト 非公式 facebookページ'
             )
           }}
+        </a>
+      </i18n>
+      <br />
+      <i18n path="メール：{mailYamaguchi}">
+        <a
+          href="stopcovid19yamaguchi@gmail.com"
+          target="_blank"
+          rel="noopener"
+          place="mailYamaguchi"
+        >
+          {{ $t('stopcovid19yamaguchi@gmail.com') }}
         </a>
       </i18n>
     </TextCard>

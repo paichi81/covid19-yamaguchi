@@ -145,6 +145,11 @@ export default {
 		},
 		*/
         {
+          title: this.$t('新型コロナウイルスに関連する県からのお知らせ'),
+          link:
+            'https://www.pref.yamaguchi.lg.jp/cms/a11000/korona_kanren/kanren_link.html'
+        },
+        {
           title: this.$t('新型コロナウイルスに関連する相談窓口'),
           link:
             'https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html',
