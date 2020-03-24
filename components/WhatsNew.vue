@@ -88,7 +88,7 @@ export default {
       display: inline-flex;
       text-decoration: none;
       margin: 5px;
-      font-size: 14px;
+      //font-size: 14px;
 
       @include lessThan($medium) {
         flex-wrap: wrap;
