@@ -8,16 +8,20 @@
       >
         mdi-menu
       </v-icon>
-      <nuxt-link :to="localePath('/')" class="SideNavigation-HeadingLink">
-        <h1 class="SideNavigation-Heading">
-          <div class="SideNavigation-Logo">
-            <img src="/logo.svg" :alt="$t('山口県')" />
+      <h1 class="SideNavigation-Heading">
+        <nuxt-link :to="localePath('/')" class="SideNavigation-HeadingLink">
+          <img
+            src="/logo.svg"
+            :alt="$t('山口県')"
+            class="SideNavigation-Logo"
+          />
+          <div class="SideNavigation-HeaderText">
+            {{ $t('新型コロナウイルス感染症') }}<br />{{
+              $t('対策サイト（非公式）')
+            }}
           </div>
-          {{ $t('新型コロナウイルス感染症') }}<br />{{
-            $t('対策サイト（非公式）')
-          }}
-        </h1>
-      </nuxt-link>
+        </nuxt-link>
+      </h1>
     </header>
     <v-divider class="SideNavigation-HeadingDivider" />
     <div class="sp-none" :class="{ open: isNaviOpen }">
@@ -262,7 +266,7 @@ export default {
     margin: 5px 16px 15px 0;
     width: 110px;
     @include lessThan($small) {
-      margin-top: 0;
+      margin: 0;
     }
   }
   &-Heading {
@@ -274,6 +278,9 @@ export default {
     @include lessThan($small) {
       margin-top: 0;
     }
+  }
+  &-HeaderText {
+    color: #898989;
   }
   &-HeadingDivider {
     margin: 0px 20px 4px;
