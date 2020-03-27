@@ -1,6 +1,11 @@
 {
     "newsItems": [
 		{
+			"date": "2020\/3\/27",
+			"url": "https://www.pref.yamaguchi.lg.jp/press/202003/045938.html",
+			"text": "広島市が公表した新型コロナウイルス感染症患者(2例目)について"
+		},
+		{
 			"date": "2020\/3\/26",
 			"url": "https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/koronahassei.html",
 			"text": "山口県内で6例目となる新型コロナウイルス感染症の感染者を確認（山口市）"
