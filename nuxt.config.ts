@@ -5,6 +5,14 @@ const autoprefixer = require('autoprefixer')
 const config: Configuration = {
   mode: 'universal',
   /*
+   ** Environments
+   */
+  env: {
+    dataUrl:
+      process.env.DATA_URL ||
+      'https://raw.githubusercontent.com/nishidayoshikatsu/covid19-yamaguchi-data/gh-pages/data.json'
+  },
+  /*
    ** Headers of the page
    */
   head: {
@@ -127,6 +135,7 @@ const config: Configuration = {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    'nuxt-client-init-module',
     [
       'nuxt-i18n',
       {

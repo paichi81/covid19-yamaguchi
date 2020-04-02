@@ -37,7 +37,7 @@
 </i18n>
 
 <script>
-import Data from '@/data/data.json'
+// import Data from '@/data/data.json'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import SvgCard from '@/components/SvgCard.vue'
 import ConfirmedCasesTable from '@/components/ConfirmedCasesTable.vue'
@@ -48,6 +48,8 @@ export default {
     ConfirmedCasesTable
   },
   data() {
+    const Data = this.$store.state.data.data
+
     // 検査陽性者の状況
     const confirmedCases = formatConfirmedCases(Data.main_summary)
 

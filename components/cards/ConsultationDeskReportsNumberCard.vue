@@ -58,7 +58,7 @@
 </i18n>
 
 <script>
-import Data from '@/data/data.json'
+// import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChartOnlyAll2 from '@/components/TimeBarChart_only-all2.vue'
 
@@ -67,6 +67,8 @@ export default {
     TimeBarChartOnlyAll2
   },
   data() {
+    const Data = this.$store.state.data.data
+
     // 帰国者・接触者電話相談センター相談件数
     const querentsGraph = formatGraph(Data.querents.data)
 
