@@ -2,3 +2,9 @@
   from = "/*"
   to = "/404.html"
   status = 404
+
+[[redirects]]
+from = "/"
+to = "https://yamaguchi.stopcovid19.jp/"
+status = 301
+force = false
