@@ -22,6 +22,7 @@ const config: Configuration = {
     titleTemplate: '%s | 山口県 新型コロナウイルス感染症対策サイト',
     meta: [
       { charset: 'utf-8' },
+			{ name: 'google-site-verification',content: '3FCEH5Hl_JmE5VLHuUbXdnaf0zFais62pYXqBqZVQsw' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
