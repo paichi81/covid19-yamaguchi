@@ -83,7 +83,45 @@ export default {
   },
   head() {
     return {
-      title: this.$t('山口県内の最新感染動向')
+      title: this.$t('山口県内の最新感染動向'),
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [
+        {
+          innerHTML: `{
+            "@context": "http://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://yamaguchi.stopcovid19.jp/"
+            },
+            "headline": "【山口県】山口県内の最新感染動向 | 新型コロナウイルス感染症対策サイト",
+            "datePublished": "2020-03-22 00:00:00+0900",
+            "dateModified": "2020-04-06 12:19:41+0000",
+            "author": {
+                "@type": "Person",
+                "name": "【山口県】新型コロナウィルス感染症対策サイト運営管理人"
+            },
+            "description": "山口県内の新型コロナウィルス感染症(COVID-19)に関する最新情報を提供しています。",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://yamaguchi.stopcovid19.jp/logo.png",
+                "width": 110,
+                "height": 31
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "【山口県】新型コロナウィルス感染症対策サイト運営管理人",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://yamaguchi.stopcovid19.jp/logo.png",
+                    "width": 110,
+                    "height": 31
+                }
+            }
+          }`,
+          type: 'application/ld+json'
+        }
+      ]
     }
   }
 }
