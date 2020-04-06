@@ -11,7 +11,7 @@
       <h1 class="SideNavigation-Heading">
         <nuxt-link :to="localePath('/')" class="SideNavigation-HeadingLink">
           <img
-            src="/logo.svg"
+            src="/logo.png"
             :alt="$t('山口県')"
             class="SideNavigation-Logo"
           />
