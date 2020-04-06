@@ -24,7 +24,7 @@ const config: Configuration = {
       { charset: 'utf-8' },
       {
         name: 'google-site-verification',
-        content: '3FCEH5Hl_JmE5VLHuUbXdnaf0zFais62pYXqBqZVQsw'
+        content: '_E5asljzqLezMC-PzVtaM38V-GE3ppmY_gYVuz4m0J0'
       },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
