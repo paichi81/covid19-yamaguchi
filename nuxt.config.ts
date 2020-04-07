@@ -80,7 +80,7 @@ const config: Configuration = {
         hid: 'twitter:image',
         name: 'twitter:image',
         content:
-          'https://user-images.githubusercontent.com/42875682/77060802-87e85400-6a1c-11ea-89fa-32265810cbb5.png'
+          'https://user-images.githubusercontent.com/42875682/78683674-8d093680-792a-11ea-9fe9-5cb20d2cafb2.png'
       },
       {
         hid: 'fb:app_id',
