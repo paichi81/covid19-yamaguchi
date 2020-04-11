@@ -96,12 +96,12 @@ export default {
             },
             "headline": "【山口県】山口県内の最新感染動向 | 新型コロナウイルス感染症対策サイト",
             "datePublished": "2020-03-22 00:00:00+0900",
-            "dateModified": "2020-04-06 12:19:41+0000",
+            "dateModified": "2020-04-11 15:19:41+0000",
             "author": {
                 "@type": "Person",
                 "name": "【山口県】新型コロナウィルス感染症対策サイト運営管理人"
             },
-            "description": "山口県内の新型コロナウィルス感染症(COVID-19)に関する最新情報を提供しています。",
+            "description": "当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、山口県内外の有志が開設したものです。",
             "image": {
                 "@type": "ImageObject",
                 "url": "https://yamaguchi.stopcovid19.jp/logo.png",
