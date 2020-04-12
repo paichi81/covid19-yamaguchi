@@ -6,9 +6,6 @@
         $t('帰国者・接触者電話相談センター')
       }}</small>
     </h4>
-    <p :class="[$style.open, $style.fzMedium]">
-      <span>{{ $t('24時間対応') }}</span>
-    </p>
     <dl>
       <div :class="$style.daytime">
         <dt :class="[$style.title, $style.fzMedium]">
@@ -16,11 +13,11 @@
         </dt>
         <dd :class="$style.link">
           <a
-            href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
+            href="https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html"
             target="_blank"
             rel="noopener"
           >
-            {{ $t('各保健所の電話番号は福祉保健局HPへ') }}
+            {{ $t('各保健所の電話番号は山口県HPへ') }}
             <v-icon size="16">
               mdi-open-in-new
             </v-icon>
@@ -32,13 +29,7 @@
           <ul :class="[$style.night]">
             <li>
               <span :class="[$style.fzMedium, $style.break, $style.mb10]">
-                {{ $t('平日（夜間）') }}
-              </span>
-              {{ $t('午後5時から翌朝午前9時') }}
-            </li>
-            <li>
-              <span :class="$style.fzMedium">
-                {{ $t('土日祝 終日') }}
+                {{ $t('土日祝 9時から17時') }}
               </span>
             </li>
           </ul>
@@ -48,7 +39,7 @@
             <span :class="$style.icon">
               <PhoneIcon alt="Phone" />
             </span>
-            <a href="tel:0353204592">03-5320-4592</a>
+            <a href="tel:0353204592">083-933-3502</a>
           </div>
         </dd>
       </div>
