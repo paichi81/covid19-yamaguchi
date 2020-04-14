@@ -39,7 +39,7 @@
       </div>
 
       <div :class="$style.AdvisoryContents">
-      <div class="pt-8">
+        <div class="pt-8">
           <div :class="$style.AdvisoryContentsTitle2">
             {{ $t('土日祝 9時から17時') }}
           </div>
