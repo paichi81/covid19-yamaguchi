@@ -23,7 +23,8 @@ export const actions = {
       payload.data.patients_summary = res.data.patients_summary
       payload.data.patients = res.data.patients
       payload.data.querents = res.data.querents
-      payload.data.lastUpdate = res.data.lastUpdate
+	  payload.data.lastUpdate = res.data.lastUpdate
+	  payload.data.main_summary = res.data.main_summary
     })
     context.commit('getData', payload)
   }
