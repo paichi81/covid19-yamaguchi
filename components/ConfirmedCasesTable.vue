@@ -199,7 +199,7 @@ export default {
   width: calc(100% / 3);
 }
 // 退院
-.item.item.recovered {
+.item.recovered {
   width: calc(100% / 3);
 }
 // 死亡
@@ -224,12 +224,12 @@ export default {
   border-left: none;
   border-right: none;
 }
-.item.item.deceased > .gutter > .box::before {
+.item.deceased > .gutter > .box::before {
   top: calc(-35px - 3px);
   right: -3px;
   border-left: none;
 }
-.item.item.deceased > .gutter > .box::before {
+.item.deceased > .gutter > .box::before {
   width: 320%;
 }
 @function px2vw($px, $vw) {
