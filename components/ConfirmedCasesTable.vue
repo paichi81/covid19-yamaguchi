@@ -259,7 +259,7 @@ export default {
   }
   .item.positive > .gutter > .box::before,
   .item.in-hospital > .gutter > .box::before,
-  .item.recovered > .gutter > .box::before {
+  .item.deceased > .gutter > .box::before {
     border-width: px2vw($bdw, $vw);
     height: px2vw($boxdiff - $bdw, $vw);
   }
@@ -269,7 +269,7 @@ export default {
     right: calc(-100% - #{px2vw($bdw * 2, $vw)} + 0.3px);
     width: calc(100% + #{px2vw($bdw * 2, $vw)});
   }
-  .item.recovered > .gutter > .box::before {
+  .item.deceased > .gutter > .box::before {
     top: px2vw(-$boxdiff - $bdw, $vw);
     right: px2vw(-$bdw, $vw);
   }
