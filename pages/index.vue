@@ -51,7 +51,7 @@ export default {
     PageHeader,
     WhatsNew,
     StaticInfo,
-    ConfirmedCasesDetailsCard,
+    //ConfirmedCasesDetailsCard,
     TestedNumberCard,
     ConfirmedCasesNumberCard,
     ConfirmedCasesAttributesCard,
