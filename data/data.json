@@ -451,5 +451,29 @@
                 "小計": 381
 			}
         ]
+	},
+	"main_summary": {
+        "attr": "検査実施人数",
+        "value": 977,
+        "children": [
+            {
+                "attr": "陽性患者数",
+                "value": 28,
+                "children": [
+                    {
+                        "attr": "入院中",
+                        "value": 25
+                    },
+                    {
+                        "attr": "退院",
+                        "value": 5
+                    },
+                    {
+                        "attr": "死亡",
+                        "value": 0
+                    }
+                ]
+            }
+        ]
     }
 }
