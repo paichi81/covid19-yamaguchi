@@ -1,14 +1,19 @@
 {
     "newsItems": [
 		{
-			"date": "2020\/4\/15",
+			"date": "2020\/4\/17",
 			"url": "https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/koronahassei.html",
-			"text": "山口県内で26〜28人目となる新型コロナウイルス感染症の感染者を確認"
+			"text": "山口県内で30人目となる新型コロナウイルス感染症の感染者を確認"
 		},
 		{
-			"date": "2020\/4\/13",
-			"url": "https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/202004130001.html",
+			"date": "2020\/4\/16",
+			"url": "https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/202004160001.html",
 			"text": "県民の皆様・企業の皆様へ(知事メッセージ)"
+		},
+		{
+			"date": "2020\/4\/15",
+			"url": "https://www.pref.yamaguchi.lg.jp/cms/a50100/korona/korona2020.html",
+			"text": "県立学校の臨時休業の状況について"
 		},
 		{
 			"date": "2020\/4\/01",
