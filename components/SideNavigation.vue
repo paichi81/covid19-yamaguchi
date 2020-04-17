@@ -140,14 +140,12 @@ export default {
           title: this.$t('山口県内の最新感染動向'),
           link: this.localePath('/')
         },
-        /*
-		{
+        {
           icon: 'covid',
           title: this.$t('新型コロナウイルス感染症が心配なときに'),
           link: this.localePath('/flow'),
           divider: true
-		},
-		*/
+        },
         {
           title: this.$t('新型コロナウイルスに関連する県からのお知らせ'),
           link:

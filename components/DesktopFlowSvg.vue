@@ -363,12 +363,8 @@
         </g>
       </g>
       <text class="b" transform="translate(622 555)">
-        <tspan x="-55" y="0">新型コロナ</tspan>
-        <tspan x="-76.67" y="25">コールセンター</tspan>
-      </text>
-      <text class="c" transform="translate(622 614)">
-        <tspan x="-75.392" y="0">午前9時から午後9時</tspan>
-        <tspan x="-56" y="20">（土日祝含む）</tspan>
+        <tspan x="-55" y="0">新型コロナ受診</tspan>
+        <tspan x="-76.67" y="25">相談窓口に相談</tspan>
       </text>
       <g class="az" transform="matrix(1, 0, 0, 1, -3, -3)">
         <g class="a" transform="translate(3 517)">
@@ -555,16 +551,10 @@
           transform="translate(876 270)"
           width="158"
         />
-        <text class="o" transform="translate(955 298)">
-          <tspan x="-48.816" y="0">24時間対応</tspan>
-        </text>
       </g>
       <g transform="translate(-45 -100)">
         <text class="p" transform="translate(946 469)">
-          <tspan x="-54" y="0">平日（夜間）</tspan>
-          <tspan class="q">
-            <tspan x="-91.392" y="23">午後5時から翌朝午前9時</tspan>
-          </tspan>
+          <tspan x="-54" y="0">土日祝 9時から17時</tspan>
         </text>
       </g>
       <line class="r" transform="translate(783.5 225.5)" x2="236" />
@@ -1059,8 +1049,8 @@
         </text>
         <g transform="translate(-101 1091)">
           <text class="b" transform="translate(238 106)">
-            <tspan x="-77" y="0">東京都健康安全</tspan>
-            <tspan x="-77" y="25">研究センター等</tspan>
+            <tspan x="-77" y="0">山口県環境</tspan>
+            <tspan x="-77" y="25">保健センター等</tspan>
           </text>
         </g>
       </g>
@@ -1176,7 +1166,7 @@
       </g>
       <g transform="translate(0 7)">
         <text class="an" transform="translate(913 456)">
-          <tspan x="-84.051" y="0">03-5320-4592</tspan>
+          <tspan x="-84.051" y="0">083-933-3502</tspan>
         </text>
         <g transform="translate(800 434)">
           <path class="d" d="M0,0H26V26H0Z" />
@@ -1190,13 +1180,13 @@
       <g transform="translate(0 -19)">
         <g transform="translate(19 5)">
           <a
-            xlink:href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
+            xlink:href="https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html"
             target="_blank"
             rel="noopener"
           >
             <text class="c" transform="translate(803 311)" style="">
               <tspan x="0" y="0">各保健所の電話番号は</tspan>
-              <tspan x="0" y="22">福祉保健局HPへ</tspan>
+              <tspan x="0" y="22">山口県HPへ</tspan>
             </text>
           </a>
           <g transform="translate(927 318)">

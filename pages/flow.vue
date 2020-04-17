@@ -16,12 +16,12 @@
       </div>
       <div class="Flow-Card-Button-Wrapper mt-6">
         <a
-          href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
+          href="https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html"
           target="_blank"
           rel="noopener"
           class="Flow-Card-Button"
         >
-          {{ $t('詳細を見る') }}
+          {{ $t('相談窓口') }}
           <v-icon class="Flow-Card-Button-ExternalLinkIcon" size="20">
             mdi-open-in-new
           </v-icon>
