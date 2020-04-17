@@ -51,10 +51,10 @@ export default {
     PageHeader,
     WhatsNew,
     StaticInfo,
-    // ConfirmedCasesDetailsCard,
     TestedNumberCard,
     ConfirmedCasesNumberCard,
-    ConfirmedCasesAttributesCard,
+	ConfirmedCasesAttributesCard,
+	ConfirmedCasesDetailsCard,
     // TelephoneAdvisoryReportsNumberCard,
     ConsultationDeskReportsNumberCard
     // MetroCard,
