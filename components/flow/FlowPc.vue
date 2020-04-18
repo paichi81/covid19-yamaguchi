@@ -45,6 +45,7 @@
         <flow-pc-hospitalized />
       </div>
     </div>
+    <!--
     <p :class="$style.Note">
       {{
         $t(
@@ -52,6 +53,7 @@
         )
       }}
     </p>
+    -->
   </div>
 </template>
 

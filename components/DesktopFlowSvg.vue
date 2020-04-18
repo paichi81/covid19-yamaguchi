@@ -363,8 +363,8 @@
         </g>
       </g>
       <text class="b" transform="translate(622 555)">
-        <tspan x="-55" y="0">新型コロナ受診</tspan>
-        <tspan x="-76.67" y="25">相談窓口に相談</tspan>
+        <tspan x="-80" y="40">新型コロナ受診</tspan>
+        <tspan x="-76.67" y="65">相談窓口に相談</tspan>
       </text>
       <g class="az" transform="matrix(1, 0, 0, 1, -3, -3)">
         <g class="a" transform="translate(3 517)">
@@ -543,6 +543,7 @@
         <tspan x="-56" y="0">帰国者・接触者</tspan>
         <tspan x="-64" y="18">電話相談センター</tspan>
       </text>
+	  <!--
       <g transform="translate(-53 -101)">
         <rect
           class="i"
@@ -552,6 +553,7 @@
           width="158"
         />
       </g>
+	  -->
       <g transform="translate(-45 -100)">
         <text class="p" transform="translate(946 469)">
           <tspan x="-54" y="0">土日祝 9時から17時</tspan>
@@ -712,7 +714,7 @@
         </text>
         <g transform="translate(520 262)">
           <path class="d" d="M0,0H30V30H0Z" />
-          <path
+          <patho
             class="e"
             d="M15.375,6.5a2.5,2.5,0,1,0-2.5-2.5A2.507,2.507,0,0,0,15.375,6.5ZM10.75,10.75,7.25,28.375H9.875l2.25-10,2.625,2.5v7.5h2.5V19l-2.625-2.5.75-3.75a9.153,9.153,0,0,0,6.875,3.125v-2.5a6.149,6.149,0,0,1-5.375-3l-1.25-2A2.578,2.578,0,0,0,13.5,7.125c-.375,0-.625.125-1,.125L6,10v5.875H8.5v-4.25l2.25-.875"
             transform="translate(1.5 0.375)"
@@ -1199,6 +1201,7 @@
           </g>
         </g>
       </g>
+	  <!--
       <text class="an" transform="translate(633 679)">
         <tspan x="-79.555" y="0">0570-550571</tspan>
       </text>
@@ -1210,6 +1213,7 @@
           transform="translate(0.25 0.25)"
         />
       </g>
+	  -->
     </g>
   </svg>
 </template>

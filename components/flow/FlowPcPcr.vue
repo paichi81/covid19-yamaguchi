@@ -4,7 +4,7 @@
       <div>
         <p :class="$style.h1">
           {{ $t('PCR検査') }}
-          <span :class="$style.small">{{ $t('※') }}</span>
+          <!-- <span :class="$style.small">{{ $t('※') }}</span> -->
         </p>
         <p :class="$style.content">
           {{ $t('山口県環境保健センター等') }}
