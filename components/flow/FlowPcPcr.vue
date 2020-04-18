@@ -4,10 +4,10 @@
       <div>
         <p :class="$style.h1">
           {{ $t('PCR検査') }}
-          <span :class="$style.small">{{ $t('※') }}</span>
+          <!-- <span :class="$style.small">{{ $t('※') }}</span> -->
         </p>
         <p :class="$style.content">
-          {{ $t('東京都健康安全研究センター等') }}
+          {{ $t('山口県環境保健センター等') }}
         </p>
       </div>
     </div>
