@@ -38,7 +38,7 @@
             </div>
           </div>
         </li>
-		<li class="item recovered">
+        <li class="item recovered">
           <div class="gutter">
             <div class="box">
               <span>{{ $t('退院') }}</span>
@@ -80,8 +80,8 @@ export default {
     入院中: {
       type: Number,
       required: true
-	},
-	退院: {
+    },
+    退院: {
       type: Number,
       required: true
     },
