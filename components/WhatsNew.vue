@@ -154,4 +154,11 @@ export default Vue.extend({
     }
   }
 }
+
+@media screen and (max-width: 575px) {
+  div.WhatsNew {
+    height: 250px;
+    overflow-y: scroll;
+  }
+}
 </style>
