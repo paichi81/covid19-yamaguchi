@@ -11,8 +11,38 @@
 このサイトを運営・改善していくためのSlackワークスペースを解説しています。  
 山口県 新型コロナウイルス感染症対策サイトの開発に興味がある方は、[こちらから登録](https://join.slack.com/t/covid19-yamaguchi/shared_invite/zt-dpiqhr12-LgiU8gAKZ_02Alkc5BoV8w)してご参加ください。
 
+## ブランチについて
+
+基本的に、`development`と`master`の2つのブランチをベースとして運用を行います。
+
+- `development`
+
+開発用ブランチです。  
+このブランチにPRを発行し、動作確認を行ってください。
+
+- `master`
+
+本番用ブランチです。  
+`development`ブランチで動作確認が終わったもののみをマージしていきます。
+
+## ブランチの運用について
+
+ブランチの運用については以下のように定めます。
+
+- 機能追加やエンハンス系について
+`feature/{issueNumber}-{branchName}` Ex) `feature/52-add_new_cards`
+
+- 緊急のバグ修正等（issueを作る場合）
+`hotfix/{issueNumber}-{branchName}` Ex) `hotfix/55-fix_nuxt_build_error`
+
+- 緊急のバグ修正等（issueを作らない場合）
+`hotfix/{branchName}` Ex) `hotfix/fix_nuxt_build_error`
+
 ## 貢献の仕方
-Issues にあるいろいろな修正にご協力いただけると嬉しいです。
+
+上記を遵守いただいた上で、issueを作成していただき `development`へPRを発行してください。
+
+※ `development`以外へのPRは禁止です。
 
 
 
