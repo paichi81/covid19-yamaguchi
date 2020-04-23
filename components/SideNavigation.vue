@@ -197,7 +197,8 @@ export default {
         },
         {
           title: this.$t('当サイトについて'),
-          link: this.localePath('/about')
+		  link: this.localePath('/about'),
+		  divider: true
         },
         {
           title: this.$t('山口県公式ホームページ'),
@@ -207,7 +208,12 @@ export default {
           title: this.$t('山口県感染症情報センターホームページ'),
           link:
             'http://kanpoken.pref.yamaguchi.lg.jp/jyoho/page5-7/page5-7-31.html',
-          divider: true
+		},
+		{
+          title: this.$t('山口県新型コロナウイルス感染症対策本部公式twitter'),
+          link:
+			'https://twitter.com/CoronaYamaguchi',
+		  divider: true
         },
         {
           title: this.$t('※当サイトは山口県内外の有志が開設したものです。'),
