@@ -34,7 +34,6 @@ import PageHeader from '@/components/PageHeader.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
 
-import Data from '@/data/data.json'
 import LastUpdate from '@/data/last_update.json'
 import PatientsCnt from '@/data/patients_cnt.json'
 import Patients from '@/data/patients.json'
