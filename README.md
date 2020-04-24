@@ -1,15 +1,15 @@
-# 山口県 新型コロナウイルス感染症対策サイト
+# 山口県公認 新型コロナウイルス感染症対策サイト
 
 [](
 ![](https://github.com/tokyo-metropolitan-gov/covid19/workflows/production%20deploy/badge.svg)
 )
 
-[![山口県 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/42875682/76772976-17a3bd80-67e5-11ea-8f4e-ab01df696fc6.png)](https://covid19-yamaguchi.netlify.com/)
+[![山口県公認 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/42875682/80171665-ea3d0180-8625-11ea-8727-c47dbcb0ea73.png)](https://yamaguchi.stopcovid19.jp/)
 
 ## Slackワークスペースへの参加
 
 このサイトを運営・改善していくためのSlackワークスペースを解説しています。  
-山口県 新型コロナウイルス感染症対策サイトの開発に興味がある方は、[こちらから登録](https://join.slack.com/t/covid19-yamaguchi/shared_invite/zt-dpiqhr12-LgiU8gAKZ_02Alkc5BoV8w)してご参加ください。
+山口県公認 新型コロナウイルス感染症対策サイトの開発に興味がある方は、[こちらから登録](https://join.slack.com/t/covid19-yamaguchi/shared_invite/zt-dpiqhr12-LgiU8gAKZ_02Alkc5BoV8w)してご参加ください。
 
 ## ブランチについて
 
