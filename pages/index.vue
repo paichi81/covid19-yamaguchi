@@ -33,7 +33,15 @@
 import PageHeader from '@/components/PageHeader.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
+
 import Data from '@/data/data.json'
+import LastUpdate from '@/data/last_update.json'
+import PatientsCnt from '@/data/patients_cnt.json'
+import Patients from '@/data/patients.json'
+import Inspections from '@/data/inspections.json'
+import Hospitalizations from '@/data/hospitalizations.json'
+import Querents from '@/data/querents.json'
+
 // import formatGraph from '@/utils/formatGraph'
 // import formatTable from '@/utils/formatTable'
 import News from '@/data/news.json'
@@ -70,12 +78,18 @@ export default {
     // )
 
     const data = {
-      Data,
+	  Data,
+	  LastUpdate,
+	  PatientsCnt,
+	  Patients,
+	  Inspections,
+	  Hospitalizations,
+	  Querents,
       // dischargesGraph,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
         title: this.$t('山口県内の最新感染動向'),
-        date: Data.lastUpdate
+        date: LastUpdate
       },
       newsItems: News.newsItems
     }
