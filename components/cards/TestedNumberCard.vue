@@ -71,7 +71,36 @@
 </i18n>
 
 <script>
-// import Data from '@/data/data.json'
+import Data from '@/data/data.json'
+/*
+import TimeStackedBarChart from '@/components/TimeStackedBarChart.vue'
+
+export default {
+  components: {
+    TimeStackedBarChart
+  },
+  data() {
+    // 検査実施日別状況
+    const inspectionsGraph = [
+      Data.inspections_summary.data['都内'],
+      Data.inspections_summary.data['その他']
+    ]
+    const inspectionsItems = [
+      this.$t('都内発生（疑い例・接触者調査）'),
+      this.$t('その他（チャーター便・クルーズ船）')
+    ]
+    const inspectionsLabels = Data.inspections_summary.labels
+
+    const data = {
+      Data,
+      inspectionsGraph,
+      inspectionsItems,
+      inspectionsLabels
+    }
+    return data
+  }
+}
+*/
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChartOnlyAll from '@/components/TimeBarChart_only-all.vue'
 
@@ -80,8 +109,6 @@ export default {
     TimeBarChartOnlyAll
   },
   data() {
-    const Data = this.$store.state.data.data
-
     // 検査数グラフ
     const inspectionsGraph = formatGraph(Data.inspections_summary.data)
 
