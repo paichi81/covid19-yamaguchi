@@ -3,8 +3,8 @@
     <svg-card
       :title="$t('検査陽性者の状況')"
       :title-id="'details-of-confirmed-cases'"
-      :date="Data.patients.date"
-	  :url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
+      :date="Hospitalizations.last_update"
+	    :url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
     >
       <confirmed-cases-table
         :aria-label="$t('検査陽性者の状況')"
@@ -38,7 +38,7 @@
 </i18n>
 
 <script>
-// import Data from '@/data/data.json'
+import Hospitalizations from '@/data/hospitalizations.json'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import SvgCard from '@/components/SvgCard.vue'
 import ConfirmedCasesTable from '@/components/ConfirmedCasesTable.vue'
@@ -49,13 +49,11 @@ export default {
     ConfirmedCasesTable
   },
   data() {
-    const Data = this.$store.state.data.data
-
     // 検査陽性者の状況
-    const confirmedCases = formatConfirmedCases(Data.main_summary)
+    const confirmedCases = formatConfirmedCases(Hospitalizations.data[0])
 
     const data = {
-      Data,
+      Hospitalizations,
       confirmedCases
     }
     return data
