@@ -1,4 +1,5 @@
 #!/bin/sh
+wget https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/last_update.json -O ./data/last_update.json
 wget https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/patients_cnt.json -O ./data/patients_cnt.json
 wget https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/patients.json -O ./data/patients.json
 wget https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/inspections.json -O ./data/inspections.json
