@@ -16,8 +16,8 @@
             class="SideNavigation-Logo"
           />
           <div class="SideNavigation-HeaderText">
-            {{ $t('新型コロナウイルス感染症') }}<br />{{
-              $t('対策サイト（非公式）')
+            {{ $t('山口県公認 新型コロナウイルス') }}<br />{{
+              $t('対策サイト')
             }}
           </div>
         </nuxt-link>
