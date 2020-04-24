@@ -4,6 +4,7 @@
       :title="$t('検査陽性者の状況')"
       :title-id="'details-of-confirmed-cases'"
       :date="Hospitalizations.last_update"
+	    :url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
     >
       <confirmed-cases-table
         :aria-label="$t('検査陽性者の状況')"
