@@ -59,7 +59,7 @@ const config: Configuration = {
         hid: 'og:image',
         property: 'og:image',
         content:
-          'https://user-images.githubusercontent.com/42875682/76772976-17a3bd80-67e5-11ea-8f4e-ab01df696fc6.png'
+          'https://user-images.githubusercontent.com/42875682/80171665-ea3d0180-8625-11ea-8727-c47dbcb0ea73.png'
       },
       {
         hid: 'twitter:card',
@@ -80,7 +80,7 @@ const config: Configuration = {
         hid: 'twitter:image',
         name: 'twitter:image',
         content:
-          'https://user-images.githubusercontent.com/42875682/78683674-8d093680-792a-11ea-9fe9-5cb20d2cafb2.png'
+          'https://user-images.githubusercontent.com/42875682/80171665-ea3d0180-8625-11ea-8727-c47dbcb0ea73.png'
       },
       {
         hid: 'fb:app_id',
