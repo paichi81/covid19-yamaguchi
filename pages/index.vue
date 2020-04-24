@@ -77,7 +77,6 @@ export default {
     // )
 
     const data = {
-	  Data,
 	  LastUpdate,
 	  PatientsCnt,
 	  Patients,
