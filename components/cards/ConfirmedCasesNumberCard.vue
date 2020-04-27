@@ -53,7 +53,7 @@ export default {
     TimeBarChart
   },
   data() {
-	const PatientsCnt = this.$store.state.patientscnt.data
+	const PatientsCnt = this.$store.state.data.patientscnt
     // 感染者数グラフ
     const patientsGraph = formatGraph(PatientsCnt.data)
 

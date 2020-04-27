@@ -37,7 +37,7 @@ export default {
     TimeBarChartOnlyAll2
   },
   data() {
-	const Querents = this.$store.state.querents.data
+	const Querents = this.$store.state.data.querents
     // 帰国者・接触者電話相談センター相談件数
     const querentsGraph = formatGraph(Querents.data)
 

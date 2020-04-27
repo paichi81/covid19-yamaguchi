@@ -49,7 +49,7 @@ export default {
     ConfirmedCasesTable
   },
   data() {
-	const Hospitalizations = this.$store.state.hospitalizations.data
+	const Hospitalizations = this.$store.state.data.hospitalizations
     // 検査陽性者の状況
     const confirmedCases = formatConfirmedCases(Hospitalizations.data[0])
 

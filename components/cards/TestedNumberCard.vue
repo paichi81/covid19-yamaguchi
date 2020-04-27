@@ -37,7 +37,7 @@ export default {
     TimeBarChartOnlyAll
   },
   data() {
-	const Inspections = this.$store.state.inspections.data
+	const Inspections = this.$store.state.data.inspections
     // 検査数グラフ
     const inspectionsGraph = formatGraph(Inspections.data)
 

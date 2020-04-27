@@ -49,7 +49,7 @@ export const actions = {
       //payload.data.querents = res.data.querents
 	  //payload.data.lastUpdate = res.data.lastUpdate
 	  //payload.data.main_summary = res.data.main_summary
-	  payload.lastupdate = res.lastupdate
+	  payload.lastupdate = res.data.lastupdate
 	  //payload.patientscnt = res.patientscnt
 	  //payload.patients = res.patients
 	  //payload.inspections = res.inspections
@@ -57,19 +57,19 @@ export const actions = {
 	  //payload.querents = res.querents
 	})
 	await axios.get(process.env.patientscntUrl).then(res => {
-		payload.patientscnt = res.patientscnt
+		payload.patientscnt = res.data
 	})
 	await axios.get(process.env.patientsUrl).then(res => {
-		payload.patients = res.patients
+		payload.patients = res.data
 	})
 	await axios.get(process.env.inspectionsUrl).then(res => {
-		payload.inspections = res.inspections
+		payload.inspections = res.data
 	})
 	await axios.get(process.env.hospitalizationsUrl).then(res => {
-		payload.hospitalizations = res.hospitalizations
+		payload.hospitalizations = res.data
 	})
 	await axios.get(process.env.querentsUrl).then(res => {
-		payload.querents = res.querents
+		payload.querents = res.data
 	})
     context.commit('getData', payload)
   }
