@@ -28,7 +28,7 @@
 </i18n>
 
 <script>
-import Querents from '@/data/querents.json'
+//import Querents from '@/data/querents.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChartOnlyAll2 from '@/components/TimeBarChart_only-all2.vue'
 
@@ -37,6 +37,7 @@ export default {
     TimeBarChartOnlyAll2
   },
   data() {
+	const Querents = this.$store.state.querents.data
     // 帰国者・接触者電話相談センター相談件数
     const querentsGraph = formatGraph(Querents.data)
 

@@ -28,7 +28,7 @@
 </i18n>
 
 <script>
-import Inspections from '@/data/inspections.json'
+//import Inspections from '@/data/inspections.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChartOnlyAll from '@/components/TimeBarChart_only-all.vue'
 
@@ -37,6 +37,7 @@ export default {
     TimeBarChartOnlyAll
   },
   data() {
+	const Inspections = this.$store.state.inspections.data
     // 検査数グラフ
     const inspectionsGraph = formatGraph(Inspections.data)
 

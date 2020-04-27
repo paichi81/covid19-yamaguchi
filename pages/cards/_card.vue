@@ -123,23 +123,30 @@ export default {
     AgencyCard
   },
   data() {
+	const LastUpdate = this.$store.state.lastupdate.data
+	const PatientsCnt = this.$store.state.patientscnt.data
+	const Patients = this.$store.state.patients.data
+	const Inspections = this.$store.state.inspections.data
+	const Hospitalizations = this.$store.state.hospitalizations.data
+	const Querents = this.$store.state.querents.data
+
     let title, updatedAt
     switch (this.$route.params.card) {
       case 'details-of-confirmed-cases':
         title = this.$t('検査陽性者の状況')
-        updatedAt = Data.inspections_summary.date
+        updatedAt = Hospitalizations.date
         break
       case 'number-of-confirmed-cases':
         title = this.$t('陽性患者数')
-        updatedAt = Data.patients.date
+        updatedAt = PatientsCnt.date
         break
       case 'attributes-of-confirmed-cases':
         title = this.$t('陽性患者の属性')
-        updatedAt = Data.patients.date
+        updatedAt = Patients.date
         break
       case 'number-of-tested':
         title = this.$t('検査実施数')
-        updatedAt = Data.inspections_summary.date
+        updatedAt = Inspections.date
         break
       case 'number-of-reports-to-covid19-telephone-advisory-center':
         title = this.$t('新型コロナコールセンター相談件数')
@@ -147,7 +154,7 @@ export default {
         break
       case 'number-of-reports-to-covid19-consultation-desk':
         title = this.$t('新型コロナ受診相談窓口相談件数')
-        updatedAt = Data.querents.date
+        updatedAt = Querents.date
         break
       case 'predicted-number-of-toei-subway-passengers':
         title = this.$t('都営地下鉄の利用者数の推移')

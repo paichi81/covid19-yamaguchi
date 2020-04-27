@@ -44,7 +44,7 @@
 </i18n>
 
 <script>
-import PatientsCnt from '@/data/patients_cnt.json'
+//import PatientsCnt from '@/data/patients_cnt.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChart from '@/components/TimeBarChart.vue'
 
@@ -53,6 +53,7 @@ export default {
     TimeBarChart
   },
   data() {
+	const PatientsCnt = this.$store.state.patientscnt.data
     // 感染者数グラフ
     const patientsGraph = formatGraph(PatientsCnt.data)
 

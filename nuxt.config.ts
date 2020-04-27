@@ -5,6 +5,29 @@ const autoprefixer = require('autoprefixer')
 const config: Configuration = {
   mode: 'universal',
   /*
+   ** Environments
+   */
+  env: {
+    lastupdateUrl:
+      process.env.LASTUPDATE_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/last_update.json',
+	patientscntUrl:
+      process.env.PATIENTSCNT_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/patients_cnt.json',
+	patientsUrl:
+      process.env.PATIENTS_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/patients.json',
+	inspectionsUrl:
+      process.env.INSPECTIONS_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/inspections.json',
+	hospitalizationsUrl:
+      process.env.HOSPITALIZATIONS_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/hospitalizations.json',
+	querentsUrl:
+      process.env.QUERENTS_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/querents.json',
+  },
+  /*
    ** Headers of the page
    */
   head: {
@@ -197,6 +220,12 @@ const config: Configuration = {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  /*
+   ** Nuxt.js router
+   */
+  router: {
+    middleware: ['getData']
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
