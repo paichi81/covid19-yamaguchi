@@ -32,8 +32,8 @@
 </i18n>
 
 <script>
-import Patients from '@/data/patients.json'
-import PatientsCnt from '@/data/patients_cnt.json'
+//import Patients from '@/data/patients.json'
+//import PatientsCnt from '@/data/patients_cnt.json'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
 import DataTable from '@/components/DataTable.vue'
@@ -43,6 +43,9 @@ export default {
     DataTable
   },
   data() {
+	const PatientsCnt = this.$store.state.data.patientscnt
+	const Patients = this.$store.state.data.patients
+
     // 感染者数グラフ
     const patientsGraph = formatGraph(PatientsCnt.data)
     // 感染者数

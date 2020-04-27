@@ -123,23 +123,30 @@ export default {
     AgencyCard
   },
   data() {
+	const LastUpdate = this.$store.state.data.lastupdate
+	const PatientsCnt = this.$store.state.data.patientscnt
+	const Patients = this.$store.state.data.patients
+	const Inspections = this.$store.state.data.inspections
+	const Hospitalizations = this.$store.state.data.hospitalizations
+	const Querents = this.$store.state.data.querents
+
     let title, updatedAt
     switch (this.$route.params.card) {
       case 'details-of-confirmed-cases':
         title = this.$t('検査陽性者の状況')
-        updatedAt = Data.inspections_summary.date
+        updatedAt = Hospitalizations.last_update
         break
       case 'number-of-confirmed-cases':
         title = this.$t('陽性患者数')
-        updatedAt = Data.patients.date
+        updatedAt = PatientsCnt.last_update
         break
       case 'attributes-of-confirmed-cases':
         title = this.$t('陽性患者の属性')
-        updatedAt = Data.patients.date
+        updatedAt = Patients.last_update
         break
       case 'number-of-tested':
         title = this.$t('検査実施数')
-        updatedAt = Data.inspections_summary.date
+        updatedAt = Inspections.last_update
         break
       case 'number-of-reports-to-covid19-telephone-advisory-center':
         title = this.$t('新型コロナコールセンター相談件数')
@@ -147,7 +154,7 @@ export default {
         break
       case 'number-of-reports-to-covid19-consultation-desk':
         title = this.$t('新型コロナ受診相談窓口相談件数')
-        updatedAt = Data.querents.date
+        updatedAt = Querents.last_update
         break
       case 'predicted-number-of-toei-subway-passengers':
         title = this.$t('都営地下鉄の利用者数の推移')
@@ -166,14 +173,14 @@ export default {
     return data
   },
   head() {
-    const url = 'https://stopcovid19.metro.tokyo.lg.jp'
+    const url = 'https://yamaguchi.stopcovid19.jp'
     const timestamp = new Date().getTime()
     const ogpImage =
       url + '/ogp-' + this.$route.params.card + '.png?t=' + timestamp
     const description =
       this.updatedAt +
       ' 更新 | ' +
-      '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、東京都が開設したものです。'
+      '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、山口県内外の有志が開設したものです。'
 
     return {
       title: this.title,
@@ -186,7 +193,7 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.title + ' | 東京都 新型コロナウイルス感染症対策サイト'
+          content: this.title + ' | 山口県公認 新型コロナウイルス感染症対策サイト'
         },
         {
           hid: 'description',

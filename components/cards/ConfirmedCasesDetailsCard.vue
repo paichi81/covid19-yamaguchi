@@ -38,7 +38,7 @@
 </i18n>
 
 <script>
-import Hospitalizations from '@/data/hospitalizations.json'
+//import Hospitalizations from '@/data/hospitalizations.json'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import SvgCard from '@/components/SvgCard.vue'
 import ConfirmedCasesTable from '@/components/ConfirmedCasesTable.vue'
@@ -49,6 +49,7 @@ export default {
     ConfirmedCasesTable
   },
   data() {
+	const Hospitalizations = this.$store.state.data.hospitalizations
     // 検査陽性者の状況
     const confirmedCases = formatConfirmedCases(Hospitalizations.data[0])
 
