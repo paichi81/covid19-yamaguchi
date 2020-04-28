@@ -8,7 +8,7 @@
       :date="PatientsCnt.last_update"
       :unit="$t('人')"
       :url="
-        'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/koronahassei.html'
+        'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240002.html'
       "
     />
   </v-col>

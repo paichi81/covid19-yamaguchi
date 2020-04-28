@@ -81,21 +81,7 @@
             <img src="/github.png" alt="GitHub" />
           </a>
         </div>
-        <!--
-		<small class="SideNavigation-Copyright">
-          {{ $t('このサイトの内容物は') }}
-          <a
-            rel="license"
-            target="_blank"
-            :href="$t('https://creativecommons.org/licenses/by/4.0/deed.ja')"
-          >
-            {{ $t('クリエイティブ・コモンズ 表示 4.0 ライセンス') }}
-          </a>
-          {{ $t('の下に提供されています。') }}
-          <br />
-          2020 Tokyo Metropolitan Government
-        </small>
-		-->
+
         <div class="SideNavigation-SponsorLinkContainer">
           <br />
           Powered by:<br />
@@ -110,6 +96,20 @@
             />
           </a>
         </div>
+
+		<small class="SideNavigation-Copyright">
+          {{ $t('このサイトの内容物は') }}
+          <a
+            rel="license"
+            target="_blank"
+            :href="$t('https://creativecommons.org/licenses/by/4.0/deed.ja')"
+          >
+            {{ $t('クリエイティブ・コモンズ 表示 4.0 ライセンス') }}
+          </a>
+          {{ $t('の下に提供されています。') }}
+          <br />
+          2020 Tokyo Metropolitan Government
+        </small>
       </v-footer>
     </div>
   </div>
@@ -147,9 +147,9 @@ export default {
           divider: true
         },
         {
-          title: this.$t('新型コロナウイルスに関連する県からのお知らせ'),
+          title: this.$t('新型コロナウイルス感染症　関連情報'),
           link:
-            'https://www.pref.yamaguchi.lg.jp/cms/a11000/korona_kanren/kanren_link.html'
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240002.html'
         },
         {
           title: this.$t('新型コロナウイルスに関連する相談窓口'),
