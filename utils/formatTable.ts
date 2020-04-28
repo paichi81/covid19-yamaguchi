@@ -59,6 +59,12 @@ export default (data: DataType[]) => {
     }
     tableDate.datasets.push(TableRow)
   })
-  tableDate.datasets.sort((a, b) => (a === b ? 0 : a < b ? 1 : -1))
+  tableDate.datasets.sort(function(a, b) {
+    if (a.公表日 === '不明' || b.公表日 === '不明') {
+      return 0
+    }
+
+    return dayjs(a.公表日).unix() > dayjs(b.公表日).unix() ? -1 : 1
+  })
   return tableDate
 }

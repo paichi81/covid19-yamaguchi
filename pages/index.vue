@@ -60,8 +60,8 @@ export default {
     StaticInfo,
     TestedNumberCard,
     ConfirmedCasesNumberCard,
-	ConfirmedCasesAttributesCard,
-	ConfirmedCasesDetailsCard,
+    ConfirmedCasesAttributesCard,
+    ConfirmedCasesDetailsCard,
     // TelephoneAdvisoryReportsNumberCard,
     ConsultationDeskReportsNumberCard
     // MetroCard,
