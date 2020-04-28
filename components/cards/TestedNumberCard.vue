@@ -8,7 +8,7 @@
       :date="Inspections.last_update"
       :unit="$t('件.tested')"
       :url="
-        'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/ncorona.html'
+        'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'
       "
     />
     <!-- 件.tested = 検査数 -->
