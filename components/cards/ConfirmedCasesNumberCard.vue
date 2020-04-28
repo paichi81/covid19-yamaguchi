@@ -8,7 +8,7 @@
       :date="PatientsCnt.last_update"
       :unit="$t('人')"
       :url="
-        'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240002.html'
+        'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'
       "
     />
   </v-col>

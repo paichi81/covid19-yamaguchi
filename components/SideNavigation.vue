@@ -213,8 +213,13 @@ export default {
           title: this.$t('山口県新型コロナウイルス感染症対策本部公式twitter'),
           link:
 			'https://twitter.com/CoronaYamaguchi',
+		},
+		{
+          title: this.$t('山口県オープンデータカタログサイト'),
+          link:
+			'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19',
 		  divider: true
-        },
+		},
         {
           title: this.$t('※当サイトは山口県内外の有志が開設したものです。'),
           divider: true
