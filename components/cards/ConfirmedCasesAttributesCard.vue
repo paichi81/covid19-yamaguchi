@@ -8,7 +8,7 @@
       :date="Patients.last_update"
       :info="sumInfoOfPatients"
       :url="
-        'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/koronahassei.html'
+        'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'
       "
     />
   </v-col>
