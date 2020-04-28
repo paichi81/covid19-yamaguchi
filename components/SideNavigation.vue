@@ -16,8 +16,8 @@
             class="SideNavigation-Logo"
           />
           <div class="SideNavigation-HeaderText">
-            {{ $t('新型コロナウイルス感染症') }}<br />{{
-              $t('対策サイト（非公式）')
+            {{ $t('山口県公認 新型コロナウイルス') }}<br />{{
+              $t('対策サイト')
             }}
           </div>
         </nuxt-link>
@@ -81,21 +81,7 @@
             <img src="/github.png" alt="GitHub" />
           </a>
         </div>
-        <!--
-		<small class="SideNavigation-Copyright">
-          {{ $t('このサイトの内容物は') }}
-          <a
-            rel="license"
-            target="_blank"
-            :href="$t('https://creativecommons.org/licenses/by/4.0/deed.ja')"
-          >
-            {{ $t('クリエイティブ・コモンズ 表示 4.0 ライセンス') }}
-          </a>
-          {{ $t('の下に提供されています。') }}
-          <br />
-          2020 Tokyo Metropolitan Government
-        </small>
-		-->
+
         <div class="SideNavigation-SponsorLinkContainer">
           <br />
           Powered by:<br />
@@ -110,6 +96,20 @@
             />
           </a>
         </div>
+
+		<small class="SideNavigation-Copyright">
+          {{ $t('このサイトの内容物は') }}
+          <a
+            rel="license"
+            target="_blank"
+            :href="$t('https://creativecommons.org/licenses/by/4.0/deed.ja')"
+          >
+            {{ $t('クリエイティブ・コモンズ 表示 4.0 ライセンス') }}
+          </a>
+          {{ $t('の下に提供されています。') }}
+          <br />
+          © 2020 yamaguchi.stopcovid19.jp
+        </small>
       </v-footer>
     </div>
   </div>
@@ -140,18 +140,16 @@ export default {
           title: this.$t('山口県内の最新感染動向'),
           link: this.localePath('/')
         },
-        /*
-		{
+        {
           icon: 'covid',
           title: this.$t('新型コロナウイルス感染症が心配なときに'),
           link: this.localePath('/flow'),
           divider: true
-		},
-		*/
+        },
         {
-          title: this.$t('新型コロナウイルスに関連する県からのお知らせ'),
+          title: this.$t('新型コロナウイルス感染症　関連情報'),
           link:
-            'https://www.pref.yamaguchi.lg.jp/cms/a11000/korona_kanren/kanren_link.html'
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240002.html'
         },
         {
           title: this.$t('新型コロナウイルスに関連する相談窓口'),
@@ -199,7 +197,8 @@ export default {
         },
         {
           title: this.$t('当サイトについて'),
-          link: this.localePath('/about')
+		  link: this.localePath('/about'),
+		  divider: true
         },
         {
           title: this.$t('山口県公式ホームページ'),
@@ -209,8 +208,18 @@ export default {
           title: this.$t('山口県感染症情報センターホームページ'),
           link:
             'http://kanpoken.pref.yamaguchi.lg.jp/jyoho/page5-7/page5-7-31.html',
-          divider: true
-        },
+		},
+		{
+          title: this.$t('山口県新型コロナウイルス感染症対策本部公式twitter'),
+          link:
+			'https://twitter.com/CoronaYamaguchi',
+		},
+		{
+          title: this.$t('山口県オープンデータカタログサイト'),
+          link:
+			'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19',
+		  divider: true
+		},
         {
           title: this.$t('※当サイトは山口県内外の有志が開設したものです。'),
           divider: true

@@ -45,10 +45,27 @@ export default {
             ),
             '<a href="https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html" target="_blank" rel="noopener">https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html</a>'
           ].join('<br />')
+		},
+		{
+          title: `3. ${this.$t('子育て中の保護者及び子どものための相談窓口について(県こども家庭課)')}`,
+          body: [
+            this.$t(
+              '保護者向けチラシ (PDF : 159KB)'
+            ),
+			'<a href="https://www.pref.yamaguchi.lg.jp/cmsdata/3/4/a/34a29b5bba282b813897d8b27f6b8f05.pdf" target="_blank" rel="noopener">https://www.pref.yamaguchi.lg.jp/cmsdata/3/4/a/34a29b5bba282b813897d8b27f6b8f05.pdf</a>',
+			this.$t(
+              '子ども向けチラシ (PDF : 124KB)'
+            ),
+            '<a href="https://www.pref.yamaguchi.lg.jp/cmsdata/b/5/2/b526f18d3ec6407f6398db4216c4a668.pdf" target="_blank" rel="noopener">https://www.pref.yamaguchi.lg.jp/cmsdata/b/5/2/b526f18d3ec6407f6398db4216c4a668.pdf</a>'
+          ].join('<br />')
         },
         {
-          title: `3. ${this.$t('その他')}`,
-          body: this.$t('詳細は、各学校からのお知らせ等をご確認ください。')
+          title: `4. ${this.$t('その他')}`,
+          body:[
+			  this.$t('県立学校の臨時休業の状況について'),
+			  '<a href="https://www.pref.yamaguchi.lg.jp/cms/a50100/korona/korona2020.html" target="_blank" rel="noopener">https://www.pref.yamaguchi.lg.jp/cms/a50100/korona/korona2020.html</a>',
+			  this.$t('詳細は、各学校からのお知らせ等をご確認ください。')
+		  ].join('<br />')
         }
       ]
     }

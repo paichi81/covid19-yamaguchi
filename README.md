@@ -1,18 +1,50 @@
-# 山口県 新型コロナウイルス感染症対策サイト
+# 山口県公認 新型コロナウイルス感染症対策サイト
 
 [](
 ![](https://github.com/tokyo-metropolitan-gov/covid19/workflows/production%20deploy/badge.svg)
 )
 
-[![山口県 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/42875682/76772976-17a3bd80-67e5-11ea-8f4e-ab01df696fc6.png)](https://covid19-yamaguchi.netlify.com/)
+[![山口県公認 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/42875682/80171665-ea3d0180-8625-11ea-8727-c47dbcb0ea73.png)](https://yamaguchi.stopcovid19.jp/)
 
+## Slackワークスペースへの参加
+
+このサイトを運営・改善していくためのSlackワークスペースを解説しています。  
+山口県公認 新型コロナウイルス感染症対策サイトの開発に興味がある方は、[こちらから登録](https://join.slack.com/t/covid19-yamaguchi/shared_invite/zt-dpiqhr12-LgiU8gAKZ_02Alkc5BoV8w)してご参加ください。
+
+## ブランチについて
+
+基本的に、`development`と`master`の2つのブランチをベースとして運用を行います。
+
+- `development`
+
+開発用ブランチです。  
+このブランチにPRを発行し、動作確認を行ってください。
+
+- `master`
+
+本番用ブランチです。  
+`development`ブランチで動作確認が終わったもののみをマージしていきます。
+
+## ブランチの運用について
+
+ブランチの運用については以下のように定めます。
+
+- 機能追加やエンハンス系について
+`feature/{issueNumber}-{branchName}` Ex) `feature/52-add_new_cards`
+
+- 緊急のバグ修正等（issueを作る場合）
+`hotfix/{issueNumber}-{branchName}` Ex) `hotfix/55-fix_nuxt_build_error`
+
+- 緊急のバグ修正等（issueを作らない場合）
+`hotfix/{branchName}` Ex) `hotfix/fix_nuxt_build_error`
 
 ## 貢献の仕方
-Issues にあるいろいろな修正にご協力いただけると嬉しいです。
+
+上記を遵守いただいた上で、issueを作成していただき `development`へPRを発行してください。
+
+※ `development`以外へのPRは禁止です。
 
 
-## 行動原則
-詳しくは[サイト構築にあたっての行動原則](./.github/CODE_OF_CONDUCT.md)を御覧ください。
 
 ## ライセンス
 本ソフトウェアは、[MITライセンス](./LICENSE.txt)の元提供されています。

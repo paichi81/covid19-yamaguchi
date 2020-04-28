@@ -5,10 +5,10 @@
       :title-id="'number-of-confirmed-cases'"
       :chart-id="'time-bar-chart-patients'"
       :chart-data="patientsGraph"
-      :date="Data.patients.date"
+      :date="PatientsCnt.last_update"
       :unit="$t('人')"
       :url="
-        'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/koronahassei.html'
+        'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'
       "
     />
   </v-col>
@@ -44,7 +44,7 @@
 </i18n>
 
 <script>
-// import Data from '@/data/data.json'
+//import PatientsCnt from '@/data/patients_cnt.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChart from '@/components/TimeBarChart.vue'
 
@@ -53,13 +53,12 @@ export default {
     TimeBarChart
   },
   data() {
-    const Data = this.$store.state.data.data
-
+	const PatientsCnt = this.$store.state.data.patientscnt
     // 感染者数グラフ
-    const patientsGraph = formatGraph(Data.patients_summary.data)
+    const patientsGraph = formatGraph(PatientsCnt.data)
 
     const data = {
-      Data,
+      PatientsCnt,
       patientsGraph
     }
     return data

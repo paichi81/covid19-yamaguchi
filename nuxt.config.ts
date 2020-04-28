@@ -8,9 +8,24 @@ const config: Configuration = {
    ** Environments
    */
   env: {
-    dataUrl:
-      process.env.DATA_URL ||
-      'https://raw.githubusercontent.com/nishidayoshikatsu/covid19-yamaguchi-data/gh-pages/data.json'
+    lastupdateUrl:
+      process.env.LASTUPDATE_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/last_update.json',
+	patientscntUrl:
+      process.env.PATIENTSCNT_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/patients_cnt.json',
+	patientsUrl:
+      process.env.PATIENTS_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/patients.json',
+	inspectionsUrl:
+      process.env.INSPECTIONS_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/inspections.json',
+	hospitalizationsUrl:
+      process.env.HOSPITALIZATIONS_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/hospitalizations.json',
+	querentsUrl:
+      process.env.QUERENTS_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/querents.json',
   },
   /*
    ** Headers of the page
@@ -19,7 +34,7 @@ const config: Configuration = {
     htmlAttrs: {
       prefix: 'og: https://ogp.me/ns#'
     },
-    titleTemplate: '%s | 山口県 新型コロナウイルス感染症対策サイト',
+    titleTemplate: '%s | 山口県公認 新型コロナウイルス感染症対策サイト',
     meta: [
       { charset: 'utf-8' },
       {
@@ -36,7 +51,7 @@ const config: Configuration = {
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: '山口県 新型コロナウイルス感染症対策サイト'
+        content: '山口県公認 新型コロナウイルス感染症対策サイト'
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
@@ -47,7 +62,7 @@ const config: Configuration = {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: '山口県 新型コロナウイルス感染症対策サイト'
+        content: '山口県公認 新型コロナウイルス感染症対策サイト'
       },
       {
         hid: 'og:description',
@@ -59,7 +74,7 @@ const config: Configuration = {
         hid: 'og:image',
         property: 'og:image',
         content:
-          'https://user-images.githubusercontent.com/42875682/76772976-17a3bd80-67e5-11ea-8f4e-ab01df696fc6.png'
+          'https://user-images.githubusercontent.com/42875682/80171665-ea3d0180-8625-11ea-8727-c47dbcb0ea73.png'
       },
       {
         hid: 'twitter:card',
@@ -80,7 +95,7 @@ const config: Configuration = {
         hid: 'twitter:image',
         name: 'twitter:image',
         content:
-          'https://user-images.githubusercontent.com/42875682/78683674-8d093680-792a-11ea-9fe9-5cb20d2cafb2.png'
+          'https://user-images.githubusercontent.com/42875682/80171665-ea3d0180-8625-11ea-8727-c47dbcb0ea73.png'
       },
       {
         hid: 'fb:app_id',
@@ -138,8 +153,8 @@ const config: Configuration = {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
-    'nuxt-client-init-module',
+	'@nuxtjs/dotenv',
+	'nuxt-client-init-module',
     [
       'nuxt-i18n',
       {
@@ -240,7 +255,7 @@ const config: Configuration = {
     hardSource: process.env.NODE_ENV === 'development'
   },
   manifest: {
-    name: '山口県 新型コロナウイルス感染症対策サイト',
+    name: '山口県公認 新型コロナウイルス感染症対策サイト',
     theme_color: '#00a040',
     background_color: '#ffffff',
     display: 'standalone',

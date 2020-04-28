@@ -21,16 +21,7 @@
 
     <div :class="[$style.SubtleBox, $style.Box2, $style.Center]">
       <div :class="$style.LargerText">
-        {{ $t('新型コロナコールセンター') }}
-      </div>
-      <div :class="$style.SmallerText">
-        {{ $t('午前9時から午後9時（土日祝含む）') }}
-      </div>
-
-      <div :class="$style.Tel">
-        <a :class="$style.TelLink" href="tel:0570550571">
-          0570-550571
-        </a>
+        {{ $t('新型コロナ受診相談窓口に相談') }}
       </div>
     </div>
   </div>
