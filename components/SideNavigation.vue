@@ -210,7 +210,12 @@ export default {
             'http://kanpoken.pref.yamaguchi.lg.jp/jyoho/page5-7/page5-7-31.html',
 		},
 		{
-          title: this.$t('山口県新型コロナウイルス感染症対策本部公式twitter'),
+          title: this.$t('山口県新型コロナウイルス感染症対策本部 公式Line'),
+          link:
+			'https://lin.ee/x22fTp5',
+		},
+		{
+          title: this.$t('山口県新型コロナウイルス感染症対策本部 公式twitter'),
           link:
 			'https://twitter.com/CoronaYamaguchi',
 		},
