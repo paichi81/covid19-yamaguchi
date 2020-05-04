@@ -1,6 +1,7 @@
 import axios from 'axios'
 //import Data from '@/data/data.json'
 import LastUpdate from '@/data/last_update.json'
+import News from '@/data/news.json'
 import PatientsCnt from '@/data/patients_cnt.json'
 import Patients from '@/data/patients.json'
 import Inspections from '@/data/inspections.json'
@@ -10,6 +11,7 @@ import Querents from '@/data/querents.json'
 export const state = () => ({
   //data: Data
   lastupdate: LastUpdate,
+  news: News,
   patientscnt: PatientsCnt,
   patients: Patients,
   inspections: Inspections,
@@ -21,6 +23,7 @@ export const mutations = {
   getData(state, payload) {
 	//state.data = payload.data,
 	state.lastupdate = payload.lastupdate,
+	state.news = payload.news,
 	state.patientscnt = payload.patientscnt,
 	state.patients = payload.patients,
 	state.inspections = payload.inspections,
@@ -34,6 +37,7 @@ export const actions = {
     const payload = {
 	  //data: Data
 	  lastupdate: LastUpdate,
+	  news: News,
 	  patientscnt: PatientsCnt,
 	  patients: Patients,
 	  inspections: Inspections,
@@ -55,6 +59,9 @@ export const actions = {
 	  //payload.inspections = res.inspections
 	  //payload.hospitalizations = res.hospitalizations
 	  //payload.querents = res.querents
+	})
+	await axios.get(process.env.newsUrl).then(res => {
+		payload.news = res.data
 	})
 	await axios.get(process.env.patientscntUrl).then(res => {
 		payload.patientscnt = res.data

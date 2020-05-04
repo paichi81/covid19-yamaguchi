@@ -35,6 +35,7 @@ import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
 
 //import LastUpdate from '@/data/last_update.json'
+import News from '@/data/news.json'
 import PatientsCnt from '@/data/patients_cnt.json'
 import Patients from '@/data/patients.json'
 import Inspections from '@/data/inspections.json'
@@ -43,7 +44,6 @@ import Querents from '@/data/querents.json'
 
 // import formatGraph from '@/utils/formatGraph'
 // import formatTable from '@/utils/formatTable'
-import News from '@/data/news.json'
 import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
 import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
@@ -76,6 +76,7 @@ export default {
     //   Data.patients.data.filter(patient => patient['備考'] === '死亡')
     // )
 	const LastUpdate = this.$store.state.data.lastupdate
+	const News = this.$store.state.data.news
 
     const data = {
 	  PatientsCnt,
@@ -88,8 +89,8 @@ export default {
         icon: 'mdi-chart-timeline-variant',
         title: this.$t('山口県内の最新感染動向'),
         date: LastUpdate
-      },
-      newsItems: News.newsItems
+	  },
+	  newsItems: News.newsItems
     }
     return data
   },
