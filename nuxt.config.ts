@@ -11,6 +11,9 @@ const config: Configuration = {
     lastupdateUrl:
       process.env.LASTUPDATE_URL ||
 	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/last_update.json',
+	newsUrl:
+      process.env.NEWS_URL ||
+	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/news.json',
 	patientscntUrl:
       process.env.PATIENTSCNT_URL ||
 	  'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/patients_cnt.json',
