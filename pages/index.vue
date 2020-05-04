@@ -76,7 +76,7 @@ export default {
     //   Data.patients.data.filter(patient => patient['備考'] === '死亡')
     // )
 	const LastUpdate = this.$store.state.data.lastupdate
-	const News = this.$store.state.state.data.news
+	const News = this.$store.state.data.news
 
     const data = {
 	  PatientsCnt,
@@ -89,8 +89,8 @@ export default {
         icon: 'mdi-chart-timeline-variant',
         title: this.$t('山口県内の最新感染動向'),
         date: LastUpdate
-      },
-      newsItems: News.newsItems
+	  },
+	  newsItems: News.newsItems
     }
     return data
   },
