@@ -166,13 +166,13 @@ export default {
           icon: 'mdi-account-multiple',
           title: this.$t('山口県民の皆様へ'),
           link:
-            'https://www.pref.yamaguchi.lg.jp/cms/a11000/korona_kanren/kanren_link.html'
+            'https://www.pref.yamaguchi.lg.jp/cms/a10900/corona/202005050001.html'
         },
         {
           icon: 'mdi-domain',
           title: this.$t('企業の皆様・はたらく皆様へ'),
           link:
-            'https://www.pref.yamaguchi.lg.jp/cms/a16300/kinyuu/202002210001.html'
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240003.html#2'
           // link: this.localePath('/worker'),
           // divider: true
         },
@@ -193,7 +193,7 @@ export default {
         {
           title: this.$t('知事からのメッセージ'),
           link:
-            'https://www.pref.yamaguchi.lg.jp/cms/a10000/chijiroom/top-page.html'
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240001.html#1'
         },
         {
           title: this.$t('当サイトについて'),
@@ -210,7 +210,7 @@ export default {
             'http://kanpoken.pref.yamaguchi.lg.jp/jyoho/page5-7/page5-7-31.html',
 		},
 		{
-          title: this.$t('山口県新型コロナウイルス感染症対策本部 公式Line'),
+          title: this.$t('山口県新型コロナウイルス感染症対策本部 公式LINE'),
           link:
 			'https://lin.ee/x22fTp5',
 		},
