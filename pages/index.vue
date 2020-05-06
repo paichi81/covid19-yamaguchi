@@ -23,6 +23,7 @@
       <consultation-desk-reports-number-card />
       <!--<metro-card />
       <agency-card-->
+      <yamaguchi-map-card />
     </v-row>
   </div>
 </template>
@@ -52,6 +53,7 @@ import TestedNumberCard from '@/components/cards/TestedNumberCard.vue'
 import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDeskReportsNumberCard.vue'
 // import MetroCard from '@/components/cards/MetroCard.vue'
 // import AgencyCard from '@/components/cards/AgencyCard.vue'
+import YamaguchiMapCard from '@/components/cards/YamaguchiMapCard.vue'
 
 export default {
   components: {
@@ -63,7 +65,8 @@ export default {
     ConfirmedCasesAttributesCard,
     ConfirmedCasesDetailsCard,
     // TelephoneAdvisoryReportsNumberCard,
-    ConsultationDeskReportsNumberCard
+	ConsultationDeskReportsNumberCard,
+	YamaguchiMapCard
     // MetroCard,
     // AgencyCard
   },
