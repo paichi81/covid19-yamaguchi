@@ -1,46 +1,34 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
-    <v-card class="DataView">
-      <div class="DataView-Inner">
-        <div class="DataView-Header">
-          <h3
-            class="DataView-Title"
-            :class="!!$slots.infoPanel ? 'with-infoPanel' : ''"
-          >
-            {{ $t('山口県内感染者発生状況') }}
-          </h3>
-          <div class="mapImage">
-            <img :src="$t('/map/yamaguchi-map.png')" alt="" />
-          </div>
-        </div>
-      </div>
-    </v-card>
+    <svg-card
+		:title="$t('山口県内感染者発生状況')"
+		:title-id="'map-in-yamaguchi'"
+		:date="'2020/05/09 10:11'"
+		:url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
+	>
+		<div class="mapImage">
+			<img
+				:src="$t('https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/yamaguchi-map.png')"
+				alt=""
+			/>
+		</div>
+    </svg-card>
   </v-col>
 </template>
 
 <script>
-// import Data from '@/data/data.json'
-// import formatGraph from '@/utils/formatGraph'
-// import TimeBarChart from '@/components/TimeBarChart.vue'
+import SvgCard from '@/components/SvgCard.vue'
+
 export default {
-  // components: {
-  //   TimeBarChart
-  // },
-  // data() {
-  //   // 感染者数グラフ
-  //   const patientsGraph = formatGraph(Data.patients_summary.data)
-  //   const data = {
-  //     Data,
-  //     patientsGraph
-  //   }
-  //   return data
-  // }
+	components: {
+		SvgCard
+	}
 }
 </script>
 <style lang="scss">
 .mapImage {
   img {
-    width: 48%;
+    width: 96%;
     @include lessThan(959) {
       width: 100%;
     }
