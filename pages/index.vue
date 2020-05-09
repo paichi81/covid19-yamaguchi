@@ -42,6 +42,7 @@ import Patients from '@/data/patients.json'
 import Inspections from '@/data/inspections.json'
 import Hospitalizations from '@/data/hospitalizations.json'
 import Querents from '@/data/querents.json'
+import MapUpdate from '@/data/map_update.json'
 
 // import formatGraph from '@/utils/formatGraph'
 // import formatTable from '@/utils/formatTable'
@@ -87,6 +88,7 @@ export default {
 	  Inspections,
 	  Hospitalizations,
 	  Querents,
+	  MapUpdate,
       // dischargesGraph,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',

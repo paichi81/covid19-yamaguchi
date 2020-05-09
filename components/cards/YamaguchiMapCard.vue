@@ -3,7 +3,7 @@
     <svg-card
 		:title="$t('山口県内感染者発生状況')"
 		:title-id="'map-in-yamaguchi'"
-		:date="'2020/05/09 10:11'"
+		:date=MapUpdate
 		:url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
 	>
 		<div class="mapImage">
@@ -22,6 +22,15 @@ import SvgCard from '@/components/SvgCard.vue'
 export default {
 	components: {
 		SvgCard
+	},
+	data() {
+		const MapUpdate = this.$store.state.data.mapupdate
+
+		const data = {
+			MapUpdate
+		}
+
+		return data
 	}
 }
 </script>
