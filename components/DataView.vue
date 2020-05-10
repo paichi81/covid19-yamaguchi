@@ -24,7 +24,7 @@
               target="_blank"
               rel="noopener"
             >
-              {{ $t('ソースはこちら') }}
+              {{ $t('出典：山口県オープンデータカタログサイト') }}
               <v-icon
                 class="ExternalLinkIcon"
                 size="15"
