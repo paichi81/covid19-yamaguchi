@@ -492,16 +492,12 @@ $margin: 20;
 .title {
   display: flex;
   align-items: center;
-  margin-bottom: $margin * 1px;
   > svg {
     width: 30px;
     height: 30px;
     > path:not(:first-of-type) {
       fill: $gray-2;
     }
-  }
-  .text {
-    margin-left: 8px;
   }
   .printerButton {
     margin: 0 0 0 auto;
