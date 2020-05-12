@@ -6,6 +6,9 @@
 		:date=MapUpdate
 		:url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
 	>
+		<p class="Graph-Desc">
+			{{ $t('以下のデータは、「国土交通省　国土数値情報（行政区域）」をもとに本サイトが作成') }}
+		</p>
 		<div class="mapImage">
 			<img
 				:src="$t('https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/yamaguchi-map.png')"
@@ -42,5 +45,11 @@ export default {
       width: 100%;
     }
   }
+}
+.Graph-Desc {
+  width: 100%;
+  margin: 0;
+  font-size: 12px;
+  color: $gray-3;
 }
 </style>
