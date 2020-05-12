@@ -1,7 +1,7 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
     <svg-card
-		:title="$t('市町村別感染状況')"
+		:title="$t('市区町村別陽性患者の累計')"
 		:title-id="'map-in-yamaguchi'"
 		:date=MapUpdate
 		:url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
