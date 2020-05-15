@@ -1,50 +1,36 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
     <time-bar-chart
-      :title="$t('陽性患者数')"
+      :title="$t('新規患者に関する報告件数の推移')"
       :title-id="'number-of-confirmed-cases'"
       :chart-id="'time-bar-chart-patients'"
       :chart-data="patientsGraph"
-      :date="PatientsCnt.last_update"
+      :date="Data.patients.date"
       :unit="$t('人')"
-      :url="
-        'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'
-      "
-    />
+      :by-date="true"
+      :url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
+    >
+      <template v-slot:description>
+        <ul>
+          <li>
+            {{ $t('（注）保健所から発生届が提出された日を基準とする') }}
+          </li>
+          <li>
+            {{ $t('（注）医療機関等が行った検査も含む') }}
+          </li>
+          <li>
+            {{
+              $t('（注）チャーター機帰国者、クルーズ船乗客等は含まれていない')
+            }}
+          </li>
+        </ul>
+      </template>
+    </time-bar-chart>
   </v-col>
 </template>
 
-<i18n>
-{
-  "ja": {
-    "陽性患者数": "陽性患者数",
-    "人": "人"
-  },
-  "en": {
-    "陽性患者数": "Number of confirmed cases",
-    "人": "persons"
-  },
-  "zh-cn": {
-    "陽性患者数": "确诊人数",
-    "人": "人"
-  },
-  "zh-tw": {
-    "陽性患者数": "確診人數",
-    "人": "人"
-  },
-  "ko": {
-    "陽性患者数": "확진자 수",
-    "人": "인"
-  },
-  "ja-basic": {
-    "陽性患者数": "びょうきの ひとの かず",
-    "人": "にん"
-  }
-}
-</i18n>
-
 <script>
-//import PatientsCnt from '@/data/patients_cnt.json'
+import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChart from '@/components/TimeBarChart.vue'
 
@@ -53,12 +39,11 @@ export default {
     TimeBarChart
   },
   data() {
-	const PatientsCnt = this.$store.state.data.patientscnt
     // 感染者数グラフ
-    const patientsGraph = formatGraph(PatientsCnt.data)
+    const patientsGraph = formatGraph(Data.patients_summary.data)
 
     const data = {
-      PatientsCnt,
+      Data,
       patientsGraph
     }
     return data

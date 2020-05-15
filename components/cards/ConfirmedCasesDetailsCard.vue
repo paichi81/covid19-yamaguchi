@@ -1,61 +1,68 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
-    <svg-card
+    <data-view
       :title="$t('検査陽性者の状況')"
       :title-id="'details-of-confirmed-cases'"
-      :date="Hospitalizations.last_update"
-	    :url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
+      :date="updatedAt"
     >
-      <confirmed-cases-table
+      <template v-slot:description>
+        <ul>
+          <li>
+            {{
+              $t('（注）チャーター機帰国者、クルーズ船乗客等は含まれていない')
+            }}
+          </li>
+          <li>
+            {{
+              $t(
+                '（注）「重症」は、集中治療室（ICU）等での管理又は人工呼吸器管理が必要な患者数を計上'
+              )
+            }}
+          </li>
+          <li>
+            {{ $t('（注）「退院等」には、療養期間経過を含む。') }}
+          </li>
+          <li>
+            {{
+              $t(
+                '（注）退院者数の把握には一定の期間を要しており、確認次第数値を更新している'
+              )
+            }}
+          </li>
+        </ul>
+      </template>
+      <confirmed-cases-details-table
         :aria-label="$t('検査陽性者の状況')"
         v-bind="confirmedCases"
       />
-    </svg-card>
+    </data-view>
   </v-col>
 </template>
 
-<i18n>
-{
-  "ja": {
-    "検査陽性者の状況": "検査陽性者の状況"
-  },
-  "en": {
-    "検査陽性者の状況": "Details of confirmed cases"
-  },
-  "zh-cn": {
-    "検査陽性者の状況": "确诊案例状况"
-  },
-  "zh-tw": {
-    "検査陽性者の状況": "確診案例狀況"
-  },
-  "ko": {
-    "検査陽性者の状況": "확진자의 현황"
-  },
-  "ja-basic": {
-    "検査陽性者の状況": "びょうきの ひとは いま"
-  }
-}
-</i18n>
-
 <script>
-//import Hospitalizations from '@/data/hospitalizations.json'
+import dayjs from 'dayjs'
+import Data from '@/data/data.json'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
-import SvgCard from '@/components/SvgCard.vue'
-import ConfirmedCasesTable from '@/components/ConfirmedCasesTable.vue'
+import DataView from '@/components/DataView.vue'
+import ConfirmedCasesDetailsTable from '@/components/ConfirmedCasesDetailsTable.vue'
 
 export default {
   components: {
-    SvgCard,
-    ConfirmedCasesTable
+    DataView,
+    ConfirmedCasesDetailsTable
   },
   data() {
-	const Hospitalizations = this.$store.state.data.hospitalizations
     // 検査陽性者の状況
-    const confirmedCases = formatConfirmedCases(Hospitalizations.data[0])
+    const confirmedCases = formatConfirmedCases(Data.main_summary)
+
+    const updatedAt = dayjs(Data.main_summary.children[0].date).format(
+      'YYYY/MM/DD HH:mm'
+    )
 
     const data = {
-      Hospitalizations,
-      confirmedCases
+      Data,
+      confirmedCases,
+      updatedAt
     }
     return data
   }

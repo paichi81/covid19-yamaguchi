@@ -1,7 +1,7 @@
 <template>
   <data-view :title="title" :title-id="titleId" :date="date" :url="url">
     <template v-slot:button>
-	  <!--
+      <!--
       <p class="Graph-Desc">
         {{
           $t(
@@ -9,13 +9,13 @@
           )
         }}
       </p>
-	  -->
+	    -->
     </template>
     <slot />
   </data-view>
 </template>
 
-<i18n src="./SvgCard.i18n.json"></i18n>
+<!-- i18n src="./SvgCard.i18n.json"></i18n -->
 
 <style lang="scss" scoped>
 /*
@@ -29,7 +29,8 @@
     font-size: 12px;
     color: $gray-3;
   }
-}*/
+}
+*/
 .DataView {
   &Desc {
     margin-top: 10px;
