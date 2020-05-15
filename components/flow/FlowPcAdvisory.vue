@@ -60,8 +60,6 @@
   </div>
 </template>
 
-<!-- i18n src="./FlowPcAdvisory.i18n.json"></i18n -->
-
 <style module lang="scss">
 .Advisory {
   display: flex;

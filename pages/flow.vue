@@ -31,11 +31,9 @@
   </div>
 </template>
 
-<!-- i18n src="./flow.i18n.json"></i18n -->
-
 <script>
 import CovidIcon from '@/static/covid.svg'
-import PrinterButton from '@/components/PrinterButton'
+import PrinterButton from '@/components/PrinterButton.vue'
 import FlowPc from '@/components/flow/FlowPc.vue'
 import FlowSp from '@/components/flow/FlowSp.vue'
 

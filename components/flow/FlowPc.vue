@@ -57,8 +57,6 @@
   </div>
 </template>
 
-<!-- i18n src="./FlowPc.i18n.json"></i18n -->
-
 <script>
 import FlowPcPast from './FlowPcPast.vue'
 import FlowPcDays from './FlowPcDays.vue'
