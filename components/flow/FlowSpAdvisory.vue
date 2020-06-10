@@ -47,7 +47,7 @@
   </div>
 </template>
 
-<i18n src="./FlowSpAdvisory.i18n.json"></i18n>
+<!-- i18n src="./FlowSpAdvisory.i18n.json"></i18n -->
 
 <script lang="ts">
 import PhoneIcon from '@/static/flow/responsive/phone.svg'

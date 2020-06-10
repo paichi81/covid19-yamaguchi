@@ -15,7 +15,7 @@
   </v-col>
 </template>
 
-<i18n>
+<!-- i18n>
 {
   "ja": {
 	"検査実施件数": "検査実施件数",
@@ -25,7 +25,7 @@
     }
   }
 }
-</i18n>
+</i18n -->
 
 <script>
 //import Inspections from '@/data/inspections.json'
