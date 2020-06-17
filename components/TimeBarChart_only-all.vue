@@ -4,7 +4,7 @@
       <p class="Graph-Desc">
         {{ $t('（注）同一の対象者について複数の検体を調査する場合あり') }}
         <br />
-        {{ $t('3月9日以前は検査実施数か検査人数か不明') }}
+        {{ $t('（注）3月9日以前は検査実施件数か検査人数か不明') }}
       </p>
       <data-selector v-model="dataKind" :target-id="chartId" />
     </template>
