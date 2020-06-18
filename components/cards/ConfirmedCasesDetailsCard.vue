@@ -3,7 +3,7 @@
     <data-view
       :title="$t('検査陽性者の状況')"
       :title-id="'details-of-confirmed-cases'"
-      :date="updatedAt"
+      :date="Hospitalizations.last_update"
     >
       <template v-slot:description>
         <!--
@@ -43,7 +43,7 @@
 
 <script>
 import dayjs from 'dayjs'
-import Data from '@/data/data.json'
+//import Data from '@/data/data.json'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import DataView from '@/components/DataView.vue'
 import ConfirmedCasesDetailsTable from '@/components/ConfirmedCasesDetailsTable.vue'
@@ -54,17 +54,19 @@ export default {
     ConfirmedCasesDetailsTable
   },
   data() {
+    const Hospitalizations = this.$store.state.data.hospitalizations
+    console.log(Hospitalizations)
     // 検査陽性者の状況
-    const confirmedCases = formatConfirmedCases(Data.main_summary)
+    const confirmedCases = formatConfirmedCases(Hospitalizations.data[0])
 
-    const updatedAt = dayjs(Data.main_summary.children[0].date).format(
-      'YYYY/MM/DD HH:mm'
-    )
+    //const updatedAt = dayjs(Data.main_summary.children[0].date).format(
+    //  'YYYY/MM/DD HH:mm'
+    //)
 
     const data = {
-      Data,
+      Hospitalizations,
       confirmedCases,
-      updatedAt
+      //updatedAt
     }
     return data
   }

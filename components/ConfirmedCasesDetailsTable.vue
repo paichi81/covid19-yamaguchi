@@ -21,7 +21,7 @@
             <br />{{ $t('(累計)') }}
           </span>
           <span>
-            <b>{{ 陽性者数 }}</b>
+            <b>{{ 陽性患者数 }}</b>
             <span class="unit">{{ $t('人') }}</span>
           </span>
         </div>
@@ -73,7 +73,7 @@
         type: Number,
         required: true
       },
-      陽性者数: {
+      陽性患者数: {
         type: Number,
         required: true
       },
