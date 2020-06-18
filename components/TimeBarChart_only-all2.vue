@@ -1,6 +1,13 @@
 <template>
   <data-view :title="title" :title-id="titleId" :date="date" :url="url">
     <template v-slot:button>
+      <p class="Graph-Desc">
+        <!--
+        {{ $t('（注）同一の対象者について複数の検体を調査する場合あり') }}
+        <br />
+        {{ $t('（注）3月9日以前は検査実施件数か検査人数か不明') }}
+        -->
+      </p>
       <data-selector v-model="dataKind" :target-id="chartId" />
     </template>
     <bar
@@ -16,20 +23,30 @@
         :unit="displayInfo.unit"
       />
     </template>
+    <template v-slot:footer>
+      <open-data-link v-show="url" :url="url" />
+    </template>
   </data-view>
 </template>
 
-<i18n src="./TimeBarChart.i18n.json"></i18n>
-
-<style></style>
+<!--<style></style>-->
+<style lang="scss" scoped>
+.Graph-Desc {
+  width: 100%;
+  margin: 0;
+  font-size: 12px;
+  color: $gray-3;
+}
+</style>
 
 <script>
 import DataView from '@/components/DataView.vue'
 // import DataSelector from '@/components/DataSelector.vue'
 import DataViewBasicInfoPanel from '@/components/DataViewBasicInfoPanel.vue'
+import OpenDataLink from '@/components/OpenDataLink.vue'
 
 export default {
-  components: { DataView, DataViewBasicInfoPanel },
+  components: { DataView, DataViewBasicInfoPanel, OpenDataLink },
   props: {
     title: {
       type: String,
