@@ -5,7 +5,7 @@
       :title-id="'number-of-reports-to-covid19-consultation-desk'"
       :chart-id="'time-bar-chart-querents'"
       :chart-data="querentsGraph"
-      :date="Data.querents.date"
+      :date="Querents.last_update"
       :unit="$t('件.reports')"
       :url="'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'"
     />
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Data from '@/data/data.json'
+//import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChartOnlyAll2 from '@/components/TimeBarChart_only-all2.vue'
 
@@ -23,11 +23,12 @@ export default {
     TimeBarChartOnlyAll2
   },
   data() {
+    const Querents = this.$store.state.data.querents
     // 帰国者・接触者 電話相談センター 相談件数
-    const querentsGraph = formatGraph(Data.querents.data)
+    const querentsGraph = formatGraph(Querents.data)
 
     const data = {
-      Data,
+      Querents,
       querentsGraph
     }
     return data
