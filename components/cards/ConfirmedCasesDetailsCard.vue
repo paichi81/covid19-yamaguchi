@@ -6,6 +6,7 @@
       :date="updatedAt"
     >
       <template v-slot:description>
+        <!--
         <ul>
           <li>
             {{
@@ -30,6 +31,7 @@
             }}
           </li>
         </ul>
+        -->
       </template>
       <confirmed-cases-details-table
         :aria-label="$t('検査陽性者の状況')"
