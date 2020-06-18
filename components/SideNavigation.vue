@@ -126,7 +126,7 @@
           <br />
           Powered by:<br />
           <a href="https://www.sakura.ad.jp/" target="_blank" rel="noopener">
-            <span class="image-title">{{$t('さくらインターネット')}}</span>
+            <!-- <span class="image-title">{{$t('さくらインターネット')}}</span> -->
             <img
               class="sakura-internet-logo"
               src="/sakura.svg"
@@ -478,6 +478,9 @@ export default Vue.extend({
 
 .SideNavigation-Social {
   display: flex;
+  a {
+    margin: 5px;
+  }
 }
 
 .SideNavigation-SocialLink {
