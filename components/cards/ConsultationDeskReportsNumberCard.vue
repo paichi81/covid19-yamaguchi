@@ -1,7 +1,7 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
-    <time-bar-chart
-      :title="$t('新型コロナ受診相談窓口相談件数')"
+    <time-bar-chart-only-all2
+      :title="$t('新型コロナ受診相談窓口相談件数（累計）')"
       :title-id="'number-of-reports-to-covid19-consultation-desk'"
       :chart-id="'time-bar-chart-querents'"
       :chart-data="querentsGraph"
@@ -16,11 +16,11 @@
 <script>
 import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
-import TimeBarChart from '@/components/TimeBarChart.vue'
+import TimeBarChartOnlyAll2 from '@/components/TimeBarChart_only-all2.vue'
 
 export default {
   components: {
-    TimeBarChart
+    TimeBarChartOnlyAll2
   },
   data() {
     // 帰国者・接触者 電話相談センター 相談件数
