@@ -9,6 +9,35 @@ const environment = process.env.NODE_ENV || 'development'
 const config: Configuration = {
   mode: 'universal',
   /*
+   ** Environments
+   */
+  env: {
+    lastupdateUrl:
+      process.env.LASTUPDATE_URL ||
+      'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/last_update.json',
+    newsUrl:
+      process.env.NEWS_URL ||
+      'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/news.json',
+    patientscntUrl:
+      process.env.PATIENTSCNT_URL ||
+      'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/patients_cnt.json',
+    patientsUrl:
+      process.env.PATIENTS_URL ||
+      'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/patients.json',
+    inspectionsUrl:
+      process.env.INSPECTIONS_URL ||
+      'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/inspections.json',
+    hospitalizationsUrl:
+      process.env.HOSPITALIZATIONS_URL ||
+      'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/hospitalizations.json',
+    querentsUrl:
+      process.env.QUERENTS_URL ||
+      'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/querents.json',
+    mapupdateUrl:
+      process.env.QUERENTS_URL ||
+      'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/map_update.json',
+  },
+  /*
    ** Headers of the page
    */
   head: {
