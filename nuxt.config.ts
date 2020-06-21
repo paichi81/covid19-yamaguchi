@@ -128,8 +128,14 @@ const config: Configuration = {
     ['nuxt-i18n', i18n],
     'nuxt-svg-loader',
     'nuxt-purgecss',
+    '@nuxtjs/axios',
     ['vue-scrollto/nuxt', { duration: 1000, offset: -72 }]
   ],
+  /*
+   ** Axios module configuration
+   ** See https://axios.nuxtjs.org/options
+   */
+  axios: {},
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
