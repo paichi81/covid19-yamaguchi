@@ -4,7 +4,7 @@
       <page-header :icon="headerItem.icon">{{ headerItem.title }}</page-header>
       <div class="UpdatedAt">
         <span>{{ $t('最終更新') }}</span>
-        <time :datetime="updatedAt">{{ Data.lastUpdate }}</time>
+        <time :datetime="updatedAt">{{ headerItem.date }}</time>
       </div>
       <div
         v-show="!['ja', 'ja-basic'].includes($i18n.locale)"
@@ -61,8 +61,14 @@ import PageHeader from '@/components/PageHeader.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
 import CardRow from '@/components/cards/CardRow.vue'
-import Data from '@/data/data.json'
+//import Data from '@/data/data.json'
 import News from '@/data/news.json'
+import PatientsCnt from '@/data/patients_cnt.json'
+import Patients from '@/data/patients.json'
+import Inspections from '@/data/inspections.json'
+import Hospitalizations from '@/data/hospitalizations.json'
+import Querents from '@/data/querents.json'
+import MapUpdate from '@/data/map_update.json'
 import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
 import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
@@ -103,21 +109,25 @@ export default Vue.extend({
     YamaguchiMapCard
   },
   data() {
+    const LastUpdate = this.$store.state.data.lastupdate
+    const News = this.$store.state.data.news
+
     const data = {
-      Data,
+      PatientsCnt,
+      Patients,
+      Inspections,
+      Hospitalizations,
+      Querents,
+      MapUpdate,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
-        title: this.$t('都内の最新感染動向')
+        title: this.$t('山口県内の最新感染動向'),
+        date: LastUpdate
       },
       newsItems: News.newsItems,
-      displayForTokyo: false
+      //displayForTokyo: false
     }
     return data
-  },
-  computed: {
-    updatedAt() {
-      return convertDatetimeToISO8601Format(this.$data.Data.lastUpdate)
-    }
   },
   head(): MetaInfo {
     return {

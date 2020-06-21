@@ -81,7 +81,11 @@ const config: Configuration = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', href: '/apple-touch-icon-precomposed.png' }
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon-precomposed.png' },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css'
+      }
     ]
   },
   /*
@@ -128,8 +132,15 @@ const config: Configuration = {
     ['nuxt-i18n', i18n],
     'nuxt-svg-loader',
     'nuxt-purgecss',
-    ['vue-scrollto/nuxt', { duration: 1000, offset: -72 }]
+    '@nuxtjs/axios',
+    ['vue-scrollto/nuxt', { duration: 1000, offset: -72 }],
+    'nuxt-client-init-module',
   ],
+  /*
+   ** Axios module configuration
+   ** See https://axios.nuxtjs.org/options
+   */
+  axios: {},
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
@@ -142,7 +153,7 @@ const config: Configuration = {
     }
   },
   googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID // .env.production などに設定してください。
+    id: 'UA-161156836-1'
   },
   optionalCookies: [
     {
