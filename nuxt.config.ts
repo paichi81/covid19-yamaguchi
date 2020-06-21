@@ -133,7 +133,8 @@ const config: Configuration = {
     'nuxt-svg-loader',
     'nuxt-purgecss',
     '@nuxtjs/axios',
-    ['vue-scrollto/nuxt', { duration: 1000, offset: -72 }]
+    ['vue-scrollto/nuxt', { duration: 1000, offset: -72 }],
+    'nuxt-client-init-module',
   ],
   /*
    ** Axios module configuration
