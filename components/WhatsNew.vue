@@ -20,7 +20,7 @@
           </external-link>
         </span>
       </div>
-      <div v-else>
+      <div v-else-if="stopEmergency">
         <span class="WhatsNew-link-to-end-of-emergency-page">
           <external-link
             url="https://www.pref.yamaguchi.lg.jp/cms/a10900/corona/202005150001.html"
