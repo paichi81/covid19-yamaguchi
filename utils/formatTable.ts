@@ -12,7 +12,7 @@ const headers = [
 
 type DataType = {
   No: string
-  リリース日: string
+  公表日: string
   居住地: string | null
   年代: string | null
   性別: '男性' | '女性' | string
@@ -47,7 +47,7 @@ export default (data: DataType[]) => {
     datasets: []
   }
   data.forEach(d => {
-    const releaseDate = dayjs(d['リリース日'])
+    const releaseDate = dayjs(d['公表日'])
     const TableRow: TableDataType = {
       No: d['No'],
       公表日: releaseDate.isValid() ? releaseDate.format('M/D') : '不明',
