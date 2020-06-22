@@ -1,5 +1,8 @@
 <template>
   <data-view :title="title" :title-id="titleId" :date="date" :url="url">
+    <template v-slot:description>
+      <slot name="description" />
+    </template>
     <template v-slot:button>
       <data-selector v-model="dataKind" :target-id="chartId" />
     </template>
@@ -16,6 +19,9 @@
         :unit="displayInfo.unit"
       />
     </template>
+    <template v-slot:footer>
+      <open-data-link v-show="url" :url="url" />
+    </template>
   </data-view>
 </template>
 
@@ -25,8 +31,9 @@
   import DataView from '@/components/DataView.vue'
   import DataSelector from '@/components/DataSelector.vue'
   import DataViewBasicInfoPanel from '@/components/DataViewBasicInfoPanel.vue'
+  import OpenDataLink from '@/components/OpenDataLink.vue'
   export default {
-    components: { DataView, DataSelector, DataViewBasicInfoPanel },
+    components: { DataView, DataSelector, DataViewBasicInfoPanel, OpenDataLink },
     props: {
       title: {
         type: String,
