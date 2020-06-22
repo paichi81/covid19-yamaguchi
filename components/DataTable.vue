@@ -9,7 +9,7 @@
       :items="chartData.datasets"
       :items-per-page="-1"
       :hide-default-footer="true"
-      :height="240"
+      :height="300"
       :fixed-header="true"
       :mobile-breakpoint="0"
       :custom-sort="customSort"
@@ -23,7 +23,7 @@
             <td class="text-start">{{ item['居住地'] }}</td>
             <td class="text-start">{{ item['年代'] }}</td>
             <td class="text-start">{{ item['性別'] }}</td>
-            <td class="text-center">{{ item['備考'] }}</td>
+            <td class="text-start">{{ item['備考'] }}</td>
             <!-- td class="text-center">{{ item['退院'] }}</td -->
           </tr>
         </tbody>
@@ -56,29 +56,38 @@
 
 <style lang="scss">
 .cardTable {
+  //border: 1px solid black;
   &.v-data-table {
     box-shadow: 0 -20px 12px -12px #0003 inset;
+    //border: 1px solid black;
     th {
+      //border: 1px solid black;
       padding: 8px 10px;
       height: auto;
       border-bottom: 1px solid $gray-4;
       color: $gray-2;
+      white-space: nowrap;
       @include font-size(12);
 
       &.text-center {
         text-align: center;
+        //border: 1px solid black;
       }
     }
 
     tbody {
+      //border: 1px solid black;
       tr {
         color: $gray-1;
 
         th {
           font-weight: normal;
+          //border: 2px solid red;
         }
 
         td {
+          //border: 1px solid black;
+          //width: auto;
           padding: 8px 10px;
           height: auto;
           @include font-size(12);
