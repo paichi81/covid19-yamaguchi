@@ -1,30 +1,56 @@
 <template>
   <div class="Parent">
     <page-header class="mb-3">
-      {{ $t('臨時休校中の新型コロナウイルス感染症対応についてのお願い') }}
+      {{ $t('新型コロナウイルス感染症対応についてのお願い') }}
     </page-header>
-    <static-card v-show="false">
+    <static-card>
       <h3>
         <external-link
-          url="https://www.kyoiku.metro.tokyo.lg.jp/school/content/learning_support.html"
+          url="https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280004.html#1"
           :icon-size="24"
-          >{{ $t('学びの支援サイト') }}
+        >{{ $t('児童生徒・保護者の皆さまへ（山口県）') }}
         </external-link>
       </h3>
+    </static-card>
+    <static-card>
+      <h3>
+        <external-link
+          url="https://www.mext.go.jp/a_menu/coronavirus/index.html"
+          :icon-size="24"
+        >{{ $t('新型コロナウイルスに関連した感染症対策に関する対応について（文部科学省）') }}
+        </external-link>
+      </h3>
+    </static-card>
+    <static-card>
+      <h3>{{ $t('学習支援コンテンツ') }}</h3>
       <ul>
         <li>
-          {{
-            $t(
-              '臨時休業期間における子供たちの学びを支援する様々なウェブサイトを紹介しています。'
-            )
-          }}
+          <external-link
+            url="https://www.mext.go.jp/a_menu/ikusei/gakusyushien/index_00001.htm"
+            :icon-size="16"
+          >{{ $t('学習支援コンテンツポータルサイト（文部科学省）') }}
+          </external-link>
         </li>
         <li>
-          {{
-            $t(
-              '学習の基本的な内容を身に付けられる「東京・ベーシック・ドリル」や動画教材等があります。'
-            )
-          }}
+          <external-link
+            url="https://www.learning-innovation.go.jp/covid_19/page/5/"
+            :icon-size="16"
+          >{{ $t('学びを止めない未来の教室（経済産業省）') }}
+          </external-link>
+        </li>
+        <li>
+          <external-link
+            url="https://www.pref.yamaguchi.lg.jp/cms/a50900/index/yamaguchi.html"
+            :icon-size="16"
+          >{{ $t('やまぐち学習支援プログラム（やまぐちっ子the Movie追加）') }}
+          </external-link>
+        </li>
+        <li>
+          <external-link
+            url="http://shien.ysn21.jp/contents/student/gakusyu/index.html"
+            :icon-size="16"
+          >{{ $t('学習コンテンツ（やまぐち総合教育支援サイト）') }}
+          </external-link>
         </li>
       </ul>
     </static-card>
@@ -65,45 +91,37 @@
     <static-card>
       <h3>{{ $t('感染症を疑う場合の対応') }}</h3>
       <ul>
-        <li>{{ $t('各保健所にご相談ください') }}</li>
-        <li>{{ $t('「新型コロナウイルスに関連する各種相談窓口について」（山口県広報広聴課）') }}</li>
+        <li>{{ $t('息苦しさ（呼吸困難）、強いだるさ（倦怠感）、高熱等の強い症状がある場合、または発熱や咳などの比較的軽い風邪の症状が続いている場合は、各保健所にご相談ください。') }}</li>
+        <li>{{ $t('各保健所の電話番号等については「新型コロナウイルスに関連する各種相談窓口について」をご確認ください。') }}</li>
         <external-link
           url="https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html"
           :icon-size="16"
-        >{{ $t('https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html') }}
+        >{{ $t('「新型コロナウイルスに関連する各種相談窓口について」') }}
         </external-link>
       </ul>
     </static-card>
     <static-card>
-      <h3>{{ $t('子育て中の保護者及び子どものための相談窓口について(県こども家庭課)') }}</h3>
+      <h3>{{ $t('子育て中の保護者及び子どものための相談窓口について') }}</h3>
       <ul>
-        <li>{{ $t('保護者向けチラシ (PDF : 159KB)') }}</li>
-        <external-link
-          url="https://www.pref.yamaguchi.lg.jp/cmsdata/3/4/a/34a29b5bba282b813897d8b27f6b8f05.pdf"
-          :icon-size="16"
-        >{{ $t('https://www.pref.yamaguchi.lg.jp/cmsdata/3/4/a/34a29b5bba282b813897d8b27f6b8f05.pdf') }}
-        </external-link>
-
-        <li>{{ $t('子ども向けチラシ (PDF : 124KB)') }}</li>
-        <external-link
-          url="https://www.pref.yamaguchi.lg.jp/cmsdata/b/5/2/b526f18d3ec6407f6398db4216c4a668.pdf"
-          :icon-size="16"
-        >{{ $t('https://www.pref.yamaguchi.lg.jp/cmsdata/b/5/2/b526f18d3ec6407f6398db4216c4a668.pdf') }}
-        </external-link>
+        <li>
+          <external-link
+            url="https://www.pref.yamaguchi.lg.jp/cmsdata/6/9/1/6919f905dd62276886c5647ec3d44f17.pdf"
+            :icon-size="16"
+          >{{ $t('子育て中の保護者のための相談窓口一覧（チラシ）') }}
+          </external-link>
+          </li>
+        <li>
+          <external-link
+            url="https://www.pref.yamaguchi.lg.jp/cmsdata/a/9/2/a92e8ea17c49a05ef2671a1c36581eb9.pdf"
+            :icon-size="16"
+          >{{ $t('子どものための相談窓口一覧（チラシ）') }}
+          </external-link>
+        </li>
       </ul>
     </static-card>
     <static-card>
       <h3>{{ $t('その他') }}</h3>
-      <ul>
-        <li>{{ $t('県立学校の臨時休業の状況について') }}</li>
-        <external-link
-          url="https://www.pref.yamaguchi.lg.jp/cms/a50100/korona/korona2020.html"
-          :icon-size="16"
-        >{{ $t('https://www.pref.yamaguchi.lg.jp/cms/a50100/korona/korona2020.html') }}
-        </external-link>
-
-        <li>{{ $t('詳細は、各学校からのお知らせ等をご確認ください。') }}</li>
-      </ul>
+      <p>{{ $t('詳細は、各学校からのお知らせ等をご確認ください。') }}</p>
     </static-card>
   </div>
 </template>
