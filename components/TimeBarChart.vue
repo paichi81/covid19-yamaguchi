@@ -3,7 +3,7 @@
     <template v-slot:description>
       <slot name="description" />
     </template>
-    <template v-slot:button>
+    <template v-if="showButton === true" v-slot:button>
       <data-selector v-model="dataKind" :target-id="chartId" />
     </template>
     <bar
@@ -59,6 +59,11 @@
         type: String,
         required: true,
         default: ''
+      },
+      showButton: {
+        type: Boolean,
+        required: false,
+        default: true
       },
       unit: {
         type: String,
