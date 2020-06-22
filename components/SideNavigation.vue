@@ -13,7 +13,7 @@
           <img
             class="SideNavigation-HeaderLogo"
             src="/logo.png"
-            :alt="$t('東京都')"
+            :alt="$t('山口県')"
           />
           <div class="SideNavigation-HeaderText">
             {{ $t('menu/新型コロナウイルス感染症') }}<br />{{
@@ -47,6 +47,8 @@
         </div>
         <menu-list :items="items" @click="$emit('closeNavi', $event)" />
       </nav>
+      <br />
+      <h3>{{ $t('※当サイトは山口県内外の有志が開設したものです。') }}</h3>
 
       <footer class="SideNavigation-Footer">
         <div class="SideNavigation-Social">
@@ -185,7 +187,7 @@ export default Vue.extend({
       return [
         {
           icon: 'mdi-chart-timeline-variant',
-          title: this.$t('都内の最新感染動向'),
+          title: this.$t('山口県内の最新感染動向'),
           link: this.localePath('/')
         },
         {
@@ -220,20 +222,32 @@ export default Vue.extend({
         //   divider: true
         // },
         {
+          icon: 'mdi-account-multiple',
+          title: this.$t('山口県民の皆様へ'),
+          link: 'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280002.html#1'
+
+        },
+        {
           icon: 'ParentIcon',
           title: this.$t('お子様をお持ちの皆様へ'),
           link: this.localePath('/parent')
         },
         {
-          icon: 'mdi-account-multiple',
-          title: this.$t('都民の皆様へ'),
-          link: 'https://www.pref.yamaguchi.lg.jp/cms/a10900/corona/202005050001.html'
-
-        },
-        {
           icon: 'mdi-domain',
           title: this.$t('企業の皆様・はたらく皆様へ'),
-          link: 'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240003.html#2',
+          link: 'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280003.html#1',
+        },
+        {
+          title: this.$t('医療機関の皆さまへ'),
+          link: 'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280005.html#1',
+        },
+        {
+          title: this.$t('山口県の対策'),
+          link: 'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280006.html#1',
+        },
+        {
+          title: this.$t('県内各市町の対策'),
+          link: 'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280007.html#1',
           divider: true
         },
         // {
@@ -245,27 +259,27 @@ export default Vue.extend({
         //   title: this.$t('東京都 新型コロナウイルス感染症 支援情報ナビ'),
         //   link: 'https://covid19.supportnavi.metro.tokyo.lg.jp/'
         // },
-        {
-          title: this.$t('東京都主催等 中止又は延期するイベント等'),
-          link:
-            'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/202002250001.html'
-        },
+        //{
+        //  title: this.$t('東京都主催等 中止又は延期するイベント等'),
+        //  link:
+        //    'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/202002250001.html'
+        //},
         // {
         //   title: this.$t('東京都における滞在人口の増減'),
         //   link:
         //     'https://www.seisakukikaku.metro.tokyo.lg.jp/information/corona-people-flow-analysis.html'
         // },
-        {
-          title: this.$t(
-            '新型コロナウイルス発生に伴う県有施設等の休館等について'
-          ),
-          link:
-            'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/202002280001.html'
-        },
+        //{
+        //  title: this.$t(
+        //    '新型コロナウイルス発生に伴う県有施設等の休館等について'
+        //  ),
+        //  link:
+        //    'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/202002280001.html'
+        //},
         {
           title: this.$t('知事からのメッセージ'),
           link:
-            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240001.html#1'
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240001.html#3'
         },
         {
           title: this.$t('当サイトについて'),
@@ -277,7 +291,7 @@ export default Vue.extend({
         //   link: this.localePath('/contacts')
         // },
         {
-          title: this.$t('東京都公式ホームページ'),
+          title: this.$t('山口県公式ホームページ'),
           link: 'https://www.pref.yamaguchi.lg.jp/'
         },
         {
@@ -295,11 +309,7 @@ export default Vue.extend({
         {
           title: this.$t('山口県オープンデータカタログサイト'),
           link: 'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19',
-          divider: true
-        },
-        {
-          title: this.$t('※当サイトは山口県内外の有志が開設したものです。'),
-          link: '/'
+          //divider: true
         }
       ]
     }
