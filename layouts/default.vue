@@ -2,7 +2,7 @@
   <v-app class="app">
     <v-overlay v-if="loading" color="#F8F9FA" opacity="1" z-index="9999">
       <div class="loader">
-        <img src="/logo.svg" alt="東京都" />
+        <img src="/logo.svg" alt="山口県" />
         <scale-loader color="#00A040" />
       </div>
     </v-overlay>
@@ -35,7 +35,7 @@
 import Vue from 'vue'
 import { MetaInfo } from 'vue-meta'
 import ScaleLoader from 'vue-spinner/src/ScaleLoader.vue'
-import Data from '@/data/data.json'
+//import Data from '@/data/data.json'
 import SideNavigation from '@/components/SideNavigation.vue'
 import NoScript from '@/components/NoScript.vue'
 import DevelopmentModeMark from '@/components/DevelopmentModeMark.vue'
@@ -104,7 +104,7 @@ export default Vue.extend({
       link: [
         {
           rel: 'canonical',
-          href: `https://stopcovid19.metro.tokyo.lg.jp${this.$route.path}`
+          href: `https://yamaguchi.stopcovid19.jp${this.$route.path}`
         },
         {
           rel: 'stylesheet',
@@ -113,30 +113,30 @@ export default Vue.extend({
       ],
       // Disable prettier for readability purposes
       // eslint-disable-next-line prettier/prettier
-      titleTemplate: `%s | ${this.$t('東京都')} ${this.$t('新型コロナウイルス感染症')}${this.$t('対策サイト')}`,
+      titleTemplate: `%s | ${this.$t('山口県公認')} ${this.$t('新型コロナウイルス感染症')}${this.$t('対策サイト')}`,
       meta: [
         {
           hid: 'author',
           name: 'author',
-          content: this.$tc('東京都')
+          content: this.$tc('山口県')
         },
         {
           hid: 'description',
           name: 'description',
           content:
             this.$t('{date} 更新', {
-              date: convertDateToSimpleFormat(Data.lastUpdate)
+              date: convertDateToSimpleFormat(this.$store.state.data.lastUpdate)
             }) +
             ': ' +
             this.$tc(
-              '当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、東京都が開設したものです。'
+              '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、山口県内外の有志が開設したものです。'
             )
         },
         {
           hid: 'og:site_name',
           property: 'og:site_name',
           content:
-            this.$t('東京都') +
+            this.$t('山口県公認') +
             ' ' +
             this.$t('新型コロナウイルス感染症') +
             ' ' +
@@ -145,14 +145,14 @@ export default Vue.extend({
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `https://stopcovid19.metro.tokyo.lg.jp${this.$route.path}`
+          content: `https://yamaguchi.stopcovid19.jp${this.$route.path}`
         },
         ogLocale,
         {
           hid: 'og:title',
           property: 'og:title',
           content:
-            this.$t('東京都') +
+            this.$t('山口県公認') +
             ' ' +
             this.$t('新型コロナウイルス感染症') +
             ' ' +
@@ -163,11 +163,11 @@ export default Vue.extend({
           property: 'og:description',
           content:
             this.$t('{date} 更新', {
-              date: convertDateToSimpleFormat(Data.lastUpdate)
+              date: convertDateToSimpleFormat(this.$store.state.data.lastUpdate)
             }) +
             ': ' +
             this.$tc(
-              '当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、東京都が開設したものです。'
+              '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、山口県内外の有志が開設したものです。'
             )
         },
         {
@@ -179,7 +179,7 @@ export default Vue.extend({
           hid: 'apple-mobile-web-app-title',
           name: 'apple-mobile-web-app-title',
           content:
-            this.$t('東京都') +
+            this.$t('山口県公認') +
             ' ' +
             this.$t('新型コロナウイルス感染症') +
             ' ' +
