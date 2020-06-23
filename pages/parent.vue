@@ -70,7 +70,7 @@
           <external-link
             url="https://www.pref.yamaguchi.lg.jp/cmsdata/1/4/2/142f5b06182fae366ce6e7bb2bf3d871.pdf"
             :icon-size="16"
-            >{{ $t('【参考】「基本は手洗い。」リーフレット (PDF : 696KB)') }}
+            >{{ $t('【参考】「基本は手洗い。」リーフレット') }}
           </external-link>
           <br />
           <external-link
