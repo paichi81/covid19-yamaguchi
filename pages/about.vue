@@ -205,7 +205,6 @@
         }}
       </p>
     </static-card>
-    <!--
     <static-card>
       <h3>{{ $t('データについて') }}</h3>
       <i18n
@@ -214,15 +213,14 @@
       >
         <template v-slot:catalogWebsite>
           <external-link
-            url="https://portal.data.metro.tokyo.lg.jp/"
+            url="https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19"
             :icon-size="16"
           >
-            {{ $t('東京都オープンデータカタログサイト') }}
+            {{ $t('山口県オープンデータカタログサイト') }}
           </external-link>
         </template>
       </i18n>
     </static-card>
-    //-->
     <static-card>
       <h3>{{ $t('ソースコードについて') }}</h3>
       <p>
