@@ -16,8 +16,8 @@
             :alt="$t('山口県')"
           />
           <div class="SideNavigation-HeaderText">
-            {{ $t('menu/新型コロナウイルス感染症') }}<br />{{
-              $t('menu/対策サイト')
+            {{ $t('新型コロナウイルス感染症') }}<br />{{
+              $t('対策サイト')
             }}
           </div>
         </nuxt-link>
