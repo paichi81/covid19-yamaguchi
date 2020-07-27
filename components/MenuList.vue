@@ -33,6 +33,10 @@ import Vue, { PropType } from 'vue'
 import CovidIcon from '@/static/covid.svg'
 import MaskTrashIcon from '@/static/masktrash.svg'
 import ParentIcon from '@/static/parent.svg'
+import FacebookIcon from '@/static/facebook.svg'
+import LineIcon from '@/static/line.svg'
+import TwitterIcon from '@/static/twitter.svg'
+import YoutubeIcon from '@/static/youtube.svg'
 
 type MenuItem = {
   icon?: string
@@ -45,7 +49,11 @@ export default Vue.extend({
   components: {
     CovidIcon,
     MaskTrashIcon,
-    ParentIcon
+    ParentIcon,
+    FacebookIcon,
+    LineIcon,
+    TwitterIcon,
+    YoutubeIcon
   },
   props: {
     items: {

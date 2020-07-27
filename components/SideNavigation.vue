@@ -295,22 +295,30 @@ export default Vue.extend({
           link: 'https://www.pref.yamaguchi.lg.jp/'
         },
         {
-          title: this.$t('山口県感染症情報センターホームページ'),
-          link: 'http://kanpoken.pref.yamaguchi.lg.jp/jyoho/page5-7/page5-7-31.html'
+          title: this.$t('山口県オープンデータカタログサイト'),
+          link: 'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19',
+          //divider: true
         },
         {
+          title: this.$t('山口県感染症情報センターホームページ'),
+          link: 'http://kanpoken.pref.yamaguchi.lg.jp/jyoho/page5-7/page5-7-31.html',
+          divider: true
+        },
+        {
+          icon: 'LineIcon',
           title: this.$t('山口県新型コロナウイルス感染症対策本部 公式LINE'),
           link: 'https://lin.ee/x22fTp5',
         },
         {
+          icon: 'TwitterIcon',
           title: this.$t('山口県新型コロナウイルス感染症対策本部 公式twitter'),
           link: 'https://twitter.com/CoronaYamaguchi',
         },
         {
-          title: this.$t('山口県オープンデータカタログサイト'),
-          link: 'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19',
-          //divider: true
-        }
+          icon: 'YoutubeIcon',
+          title: this.$t('山口県山口県広報広聴課 公式チャンネル'),
+          link: 'https://www.youtube.com/channel/UCukxs2WSvAbgAweFsj8k5Cw',
+        },
       ]
     }
   },
