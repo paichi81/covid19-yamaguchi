@@ -316,7 +316,7 @@ export default Vue.extend({
         },
         {
           icon: 'YoutubeIcon',
-          title: this.$t('山口県山口県広報広聴課 公式チャンネル'),
+          title: this.$t('山口県広報広聴課 公式チャンネル'),
           link: 'https://www.youtube.com/channel/UCukxs2WSvAbgAweFsj8k5Cw',
         },
       ]
