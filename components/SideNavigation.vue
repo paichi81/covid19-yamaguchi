@@ -48,32 +48,47 @@
         <menu-list :items="items" @click="$emit('closeNavi', $event)" />
       </nav>
       <br />
-      <h3>{{ $t('※当サイトは山口県内外の有志が開設したものです。') }}</h3>
-
       <footer class="SideNavigation-Footer">
+        <h3>{{ $t('山口県公式情報へのリンク') }}</h3>
         <div class="SideNavigation-Social">
-<!--          <a-->
-<!--            href="https://line.me/R/ti/p/%40822sysfc"-->
-<!--            target="_blank"-->
-<!--            rel="noopener noreferrer"-->
-<!--            class="SideNavigation-SocialLink"-->
-<!--          >-->
-<!--            <picture>-->
-<!--              <source srcset="/line.webp" type="image/webp" />-->
-<!--              <img src="/line.png" alt="LINE" />-->
-<!--            </picture>-->
-<!--          </a>-->
-<!--          <a-->
-<!--            href="https://twitter.com/tokyo_bousai"-->
-<!--            target="_blank"-->
-<!--            rel="noopener noreferrer"-->
-<!--            class="SideNavigation-SocialLink"-->
-<!--          >-->
-<!--            <picture>-->
-<!--              <source srcset="/twitter.webp" type="image/webp" />-->
-<!--              <img src="/twitter.png" alt="Twitter" />-->
-<!--            </picture>-->
-<!--          </a>-->
+          <a
+            href="https://lin.ee/x22fTp5"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="SideNavigation-SocialLink"
+          >
+            <picture>
+              <source srcset="/line.webp" type="image/webp" />
+              <img src="/line.png" alt="LINE" />
+            </picture>
+          </a>
+          <a
+            href="https://twitter.com/CoronaYamaguchi"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="SideNavigation-SocialLink"
+          >
+            <picture>
+              <source srcset="/twitter.webp" type="image/webp" />
+              <img src="/twitter.png" alt="Twitter" />
+            </picture>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCukxs2WSvAbgAweFsj8k5Cw"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="SideNavigation-SocialLink"
+          >
+            <picture>
+              <source srcset="/youtube.webp" type="image/webp" />
+              <img src="/youtube.png" alt="YouTube" />
+            </picture>
+          </a>
+        </div>
+
+        <hr/>
+
+        <div class="SideNavigation-Social">
 <!--          <a-->
 <!--            href="https://www.facebook.com/tochokoho"-->
 <!--            target="_blank"-->
@@ -96,17 +111,6 @@
 <!--              <img src="/github.png" alt="GitHub" />-->
 <!--            </picture>-->
 <!--          </a>-->
-<!--          <a-->
-<!--            href="https://www.youtube.com/user/tokyo/videos"-->
-<!--            target="_blank"-->
-<!--            rel="noopener noreferrer"-->
-<!--            class="SideNavigation-SocialLink"-->
-<!--          >-->
-<!--            <picture>-->
-<!--              <source srcset="/youtube.webp" type="image/webp" />-->
-<!--              <img src="/youtube.png" alt="YouTube" />-->
-<!--            </picture>-->
-<!--          </a>-->
 
           <a
             href="https://www.facebook.com/stopcovid19yamaguchi/"
@@ -123,6 +127,7 @@
             <img src="/github.png" alt="GitHub" width="30px" />
           </a>
         </div>
+        <h3>{{ $t('※当サイトは山口県内外の有志が開設したものです。') }}</h3>
 
         <div class="SideNavigation-SponsorLinkContainer">
           <br />
@@ -298,14 +303,14 @@ export default Vue.extend({
           title: this.$t('山口県感染症情報センターホームページ'),
           link: 'http://kanpoken.pref.yamaguchi.lg.jp/jyoho/page5-7/page5-7-31.html'
         },
-        {
-          title: this.$t('山口県新型コロナウイルス感染症対策本部 公式LINE'),
-          link: 'https://lin.ee/x22fTp5',
-        },
-        {
-          title: this.$t('山口県新型コロナウイルス感染症対策本部 公式twitter'),
-          link: 'https://twitter.com/CoronaYamaguchi',
-        },
+        // {
+        //   title: this.$t('山口県新型コロナウイルス感染症対策本部 公式LINE'),
+        //   link: 'https://lin.ee/x22fTp5',
+        // },
+        // {
+        //   title: this.$t('山口県新型コロナウイルス感染症対策本部 公式twitter'),
+        //   link: 'https://twitter.com/CoronaYamaguchi',
+        // },
         {
           title: this.$t('山口県オープンデータカタログサイト'),
           link: 'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19',
