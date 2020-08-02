@@ -284,6 +284,11 @@ export default Vue.extend({
         {
           title: this.$t('当サイトについて'),
           link: this.localePath('/about'),
+          divider: false
+        },
+        {
+          title: this.$t('他都道府県の新型コロナ対策サイト'),
+          link: this.localePath('/otherpref'),
           divider: true
         },
         // {
@@ -309,7 +314,7 @@ export default Vue.extend({
         {
           title: this.$t('山口県オープンデータカタログサイト'),
           link: 'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19',
-          //divider: true
+          // divider: true
         }
       ]
     }
