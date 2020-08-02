@@ -344,6 +344,12 @@ export default Vue.extend({
               link: 'https://kagawa.stopcovid19.jp/'
             },
             {
+              title: this.$t('徳島県'),
+              subtitle: this.$t(''),
+              isOfficial: false,
+              link: 'https://covid19-tokushima.netlify.com/'
+            },
+            {
               title: this.$t('高知県'),
               subtitle: this.$t(''),
               isOfficial: false,
