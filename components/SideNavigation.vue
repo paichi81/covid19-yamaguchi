@@ -205,6 +205,12 @@ export default Vue.extend({
           title: this.$t('新型コロナウイルスに関連する相談窓口'),
           link:
             'https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html',
+          divider: false
+        },
+        {
+          title: this.$t('お問い合わせ先・県内保健所一覧'),
+          link:
+            '/contacts',
           divider: true
         },
         //
