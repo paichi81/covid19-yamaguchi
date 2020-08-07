@@ -14,8 +14,6 @@
       </div>
     </div>
     <whats-new class="mb-4" :items="newsItems" />
-    <cocoa-redirect-card></cocoa-redirect-card>
-
     <static-info
       class="mb-4"
       :urlNotUse="localePath('/flow')"
@@ -87,14 +85,12 @@ import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDe
 // import PositiveNumberByDiagnosedDateCard from '@/components/cards/PositiveNumberByDiagnosedDateCard.vue'
 import YamaguchiMapCard from '@/components/cards/YamaguchiMapCard.vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
-import CocoaRedirectCard from '@/components/CocoaRedirectCard'
 
 export default Vue.extend({
   components: {
     // PositiveRateCard,
     PageHeader,
     WhatsNew,
-    CocoaRedirectCard,
     StaticInfo,
     CardRow,
     ConfirmedCasesDetailsCard,
