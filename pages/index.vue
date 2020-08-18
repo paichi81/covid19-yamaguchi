@@ -14,7 +14,7 @@
       </div>
     </div>
     <whats-new class="mb-4" :items="newsItems" />
-    <cocoa-redirect-card></cocoa-redirect-card>
+    <cocoa-redirect-card />
 
     <static-info
       class="mb-4"
