@@ -300,7 +300,7 @@ export default Vue.extend({
         },
         {
           title: this.$t('山口県感染症情報センターホームページ'),
-          link: 
+          link:
             'http://kanpoken.pref.yamaguchi.lg.jp/jyoho/page5-7/page5-7-31.html',
           divider: true
         },
@@ -317,7 +317,7 @@ export default Vue.extend({
         {
           icon: 'YoutubeIcon',
           title: this.$t('山口県広報広聴課 公式チャンネル'),
-          link: 'https://www.youtube.com/channel/UCukxs2WSvAbgAweFsj8k5Cw',
+          link: 'https://www.youtube.com/channel/UCukxs2WSvAbgAweFsj8k5Cw'
         }
       ]
     }
