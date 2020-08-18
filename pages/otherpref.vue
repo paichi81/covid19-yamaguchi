@@ -21,8 +21,7 @@
               lg="3"
               xl="2"
             >
-              <v-card :href="pref.link" flat tile
-              >
+              <v-card :href="pref.link" flat tile>
                 <v-card-title>
                   {{ pref.title }}
                   <span v-if="pref.subtitle !== ''">
