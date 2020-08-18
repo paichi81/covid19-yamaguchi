@@ -21,10 +21,7 @@
               lg="3"
               xl="2"
             >
-              <v-card
-                :href="pref.link"
-                flat
-                tile
+              <v-card :href="pref.link" flat tile
               >
                 <v-card-title>
                   {{ pref.title }}
@@ -205,7 +202,7 @@ export default Vue.extend({
               subtitle: this.$t(''),
               isOfficial: false,
               link: 'https://stopcovid19.hokkaido.dev/'
-            },
+            }
           ]
         },
         {
@@ -403,7 +400,7 @@ export default Vue.extend({
               subtitle: this.$t(''),
               isOfficial: false,
               link: 'https://okinawa.stopcovid19.jp/'
-            },
+            }
           ]
         }
       ]
