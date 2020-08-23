@@ -175,7 +175,6 @@
   "menu/対策サイト": "　",
   "最終更新": "Last update",
   "注釈": " This is a provisional translation. Please be aware that there may be mistranslations.",
-  "print": " Print",
   "サイドメニュー項目を開く": "Open side menu items",
   "サイドメニュー項目を閉じる": "Close side menu items",
   "お子様をお持ちの皆様へ": "To families with children",
@@ -588,5 +587,6 @@
   "防府支所": "Hofu Branch",
   "サイトに関すること": "About the site",
   "山口県県公式サイトで確認する": "View on the official website of Yamaguchi",
-  "その他の問い合わせ": "Other"
+  "その他の問い合わせ": "Other",
+  "印刷する": "PRINT"
 }
