@@ -9,7 +9,7 @@
     </page-header>
 
     <div>
-      <h2 >
+      <h2>
         {{ $t('感染等に関する相談(帰国者・接触者相談センター)') }}
       </h2>
     </div>
@@ -24,36 +24,6 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="small">
-            <td colspan="4">
-              {{ $t('平日 9時～17時 対応') }}
-              <br />
-              <span>
-                {{ $t('土曜日・日曜日・祝日は県健康増進課で、下関市民の方は下関市立下関保健所で対応します。') }}
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td class="content text-center" colspan="2">{{ $t('県健康増進課') }}</td>
-            <td class="tel text-center">
-              <a href="tel:083-933-3502">083-933-3502</a>
-            </td>
-            <td class="municipality text-center">{{ $t('県内') }}</td>
-          </tr>
-
-          <tr class="small">
-            <td colspan="4">
-              {{ $t('平日 9時～17時 対応') }}
-              <br />
-              <span>
-                {{
-                  $t(
-                    '緊急を要する症状がある場合は、保健所で、土曜日・日曜日・祝日を含めて24時間対応します。'
-                  )
-                }}
-              </span>
-            </td>
-          </tr>
           <tr>
             <td rowspan="9">{{ $t('保健所') }}</td>
             <td class="content text-center">
@@ -74,7 +44,8 @@
               <a href="tel:0820-22-3631">0820-22-3631</a>
             </td>
             <td class="municipality text-center">
-              {{ $t('柳井市') }},{{ $t('周防大島町') }}, {{ $t('上関町') }}, {{ $t('田布施町') }}, {{ $t('平生町') }}
+              {{ $t('柳井市') }}, {{ $t('周防大島町') }}, {{ $t('上関町') }},
+              {{ $t('田布施町') }}, {{ $t('平生町') }}
             </td>
           </tr>
           <tr>
@@ -101,7 +72,8 @@
           </tr>
           <tr>
             <td class="content text-center">
-              {{ $t('山口健康福祉センター 防府支所') }}
+              {{ $t('山口健康福祉センター') }}
+              {{ $t('防府支所') }}
             </td>
             <td class="tel text-center">
               <a href="tel:0835-22-3740">0835-22-3740</a>
@@ -155,6 +127,16 @@
             </td>
           </tr>
 
+          <tr>
+            <td class="content text-center" colspan="2">
+              {{ $t('県健康増進課') }}
+            </td>
+            <td class="tel text-center">
+              <a href="tel:083-933-3502">083-933-3502</a>
+            </td>
+            <td class="municipality text-center">{{ $t('県内') }}</td>
+          </tr>
+
           <tr class="small">
             <td colspan="3">
               <external-link
@@ -170,8 +152,32 @@
     <br />
 
     <div>
-      <h2 >
-        {{ $t('その他') }}
+      <h2>
+        {{ $t('厚生労働省電話相談窓口（コールセンター）のご案内') }}
+      </h2>
+    </div>
+
+    <StaticCard>
+      {{
+        $t(
+          '厚生労働省でも新型コロナウイルスに関する電話相談窓口を開設しています。'
+        )
+      }}
+      <br />
+      {{ $t('電話番号') }}
+      <a href="tel:0120565653">0120-565-653</a>
+      ( {{ $t('フリーダイヤル') }} )
+      <br />
+      {{ $t('受付時間') }}
+      {{ $t('9時00分〜21時00分（土日・祝日も実施）') }}
+      <br />
+      {{ $t('聴覚に障害のある方をはじめ、電話でのご相談が難しい方') }}
+      FAX 03-3595-2756
+    </StaticCard>
+
+    <div>
+      <h2>
+        {{ $t('その他の問い合わせ') }}
       </h2>
     </div>
 
@@ -213,17 +219,16 @@
         </tbody>
       </table>
     </div>
+
     <br />
     <StaticCard>
-      {{
-        $t('このサイトは、山口県が管理しているものではありません。')
-      }}
+      {{ $t('このサイトは、山口県が管理しているものではありません。') }}
       {{
         $t(
           'このサイトに関するご意見やご質問などは、県ではなく当サイトの管理者にお寄せください。'
         )
       }}
-      {{ $t('県はこのサイトには一切関与しておりません。') }}
+      <!-- {{ $t('県はこのサイトには一切関与しておりません。') }} -->
     </StaticCard>
   </div>
 </template>
@@ -239,11 +244,11 @@ export default Vue.extend({
   components: {
     PageHeader,
     StaticCard,
-    ExternalLink,
+    ExternalLink
   },
   data() {
     return {
-      pc: true,
+      pc: true
     }
   },
   computed: {
@@ -252,7 +257,7 @@ export default Vue.extend({
     },
     headingAttrs(): any {
       return this.pc ? {} : { role: 'heading', 'aria-level': '3' }
-    },
+    }
   },
   mounted() {
     if (process.browser) {
@@ -268,13 +273,13 @@ export default Vue.extend({
   methods: {
     handleResize() {
       this.pc = window.innerWidth > 768
-    },
+    }
   },
   head(): MetaInfo {
     return {
-      title: this.$t('お問い合わせ先・県内保健所一覧') as string,
+      title: this.$t('お問い合わせ先・県内保健所一覧') as string
     }
-  },
+  }
 })
 </script>
 
