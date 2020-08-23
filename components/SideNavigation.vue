@@ -209,8 +209,7 @@ export default Vue.extend({
         },
         {
           title: this.$t('お問い合わせ先・県内保健所一覧'),
-          link:
-            '/contacts',
+          link: '/contacts',
           divider: true
         },
         //
