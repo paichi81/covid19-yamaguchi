@@ -21,7 +21,7 @@
               lg="3"
               xl="2"
             >
-              <v-card :href="pref.link" flat tile>
+              <v-card :href="pref.link" flat tile class="OtherPref-Link">
                 <v-card-title>
                   {{ pref.title }}
                   <span v-if="pref.subtitle !== ''">
@@ -442,6 +442,7 @@ export default Vue.extend({
 
   &:hover {
     font-weight: bold;
+    background-color: $gray-4;
   }
 
   &:focus {
