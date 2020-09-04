@@ -4,7 +4,7 @@
       <div :class="$style.AdvisoryContents">
         <div>
           <span :class="$style.AdvisoryContentsTitle">{{
-            $t('新型コロナ受診相談窓口')
+            $t('山口県新型コロナウイルス感染症専用相談ダイアル')
           }}</span>
         </div>
         <!--
