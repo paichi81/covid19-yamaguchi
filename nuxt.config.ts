@@ -26,7 +26,7 @@ const config: Configuration = {
       'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/patients.json',
     inspectionsUrl:
       process.env.INSPECTIONS_URL ||
-      'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/inspections.json',
+      'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/inspections_person.json',
     hospitalizationsUrl:
       process.env.HOSPITALIZATIONS_URL ||
       'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/hospitalizations.json',
