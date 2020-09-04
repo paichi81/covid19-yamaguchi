@@ -14,7 +14,7 @@
         <PrinterIcon v-else aria-hidden="true" />
       </div>
       <span class="PrinterButton-Text">
-        {{ $t('print') }}
+        {{ $t('印刷する') }}
       </span>
     </v-btn>
   </div>
