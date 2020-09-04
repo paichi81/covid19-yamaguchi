@@ -1,25 +1,27 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
     <time-bar-chart
-      :title="$t('PCR検査実施件数（累計）')"
+      :title="$t('PCR検査実施人数（累計）')"
       :title-id="'number-of-tested'"
       :chart-id="'time-stacked-bar-chart-inspections'"
       :chart-data="inspectionsGraph"
       :date="Inspections.last_update"
       :show-button="false"
-      :unit="$t('件.tested')"
+      :unit="$t('人')"
       :url="
         'https://yamaguchi-opendata.jp/ckan/dataset/350001-covid19'
       "
     >
       <template v-slot:description>
         <ul>
+          <!--
           <li>
             {{ $t('（注）同一の対象者について複数の検体を調査する場合あり') }}
           </li>
           <li>
             {{ $t('（注）3月9日以前は検査実施件数か検査人数か不明') }}
           </li>
+          -->
         </ul>
       </template>
     </time-bar-chart>
