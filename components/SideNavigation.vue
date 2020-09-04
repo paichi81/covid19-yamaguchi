@@ -283,7 +283,7 @@ export default Vue.extend({
         {
           title: this.$t('知事からのメッセージ'),
           link:
-            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240001.html#3'
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202008030001.html'
         },
         {
           title: this.$t('当サイトについて'),
