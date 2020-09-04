@@ -16,9 +16,7 @@
             :alt="$t('山口県')"
           />
           <div class="SideNavigation-HeaderText">
-            {{ $t('新型コロナウイルス感染症') }}<br />{{
-              $t('対策サイト')
-            }}
+            {{ $t('新型コロナウイルス感染症') }}<br />{{ $t('対策サイト') }}
           </div>
         </nuxt-link>
       </h1>
@@ -34,6 +32,7 @@
       </v-icon>
 
       <nav class="SideNavigation-Menu">
+        <!--
         <div class="SideNavigation-Language">
           <div
             v-if="this.$i18n.locales.length > 1"
@@ -45,6 +44,7 @@
             <language-selector />
           </div>
         </div>
+        -->
         <menu-list :items="items" @click="$emit('closeNavi', $event)" />
       </nav>
       <br />
@@ -52,61 +52,61 @@
 
       <footer class="SideNavigation-Footer">
         <div class="SideNavigation-Social">
-<!--          <a-->
-<!--            href="https://line.me/R/ti/p/%40822sysfc"-->
-<!--            target="_blank"-->
-<!--            rel="noopener noreferrer"-->
-<!--            class="SideNavigation-SocialLink"-->
-<!--          >-->
-<!--            <picture>-->
-<!--              <source srcset="/line.webp" type="image/webp" />-->
-<!--              <img src="/line.png" alt="LINE" />-->
-<!--            </picture>-->
-<!--          </a>-->
-<!--          <a-->
-<!--            href="https://twitter.com/tokyo_bousai"-->
-<!--            target="_blank"-->
-<!--            rel="noopener noreferrer"-->
-<!--            class="SideNavigation-SocialLink"-->
-<!--          >-->
-<!--            <picture>-->
-<!--              <source srcset="/twitter.webp" type="image/webp" />-->
-<!--              <img src="/twitter.png" alt="Twitter" />-->
-<!--            </picture>-->
-<!--          </a>-->
-<!--          <a-->
-<!--            href="https://www.facebook.com/tochokoho"-->
-<!--            target="_blank"-->
-<!--            rel="noopener noreferrer"-->
-<!--            class="SideNavigation-SocialLink"-->
-<!--          >-->
-<!--            <picture>-->
-<!--              <source srcset="/facebook.webp" type="image/webp" />-->
-<!--              <img src="/facebook.png" alt="Facebook" />-->
-<!--            </picture>-->
-<!--          </a>-->
-<!--          <a-->
-<!--            href="https://github.com/tokyo-metropolitan-gov/covid19"-->
-<!--            target="_blank"-->
-<!--            rel="noopener noreferrer"-->
-<!--            class="SideNavigation-SocialLink"-->
-<!--          >-->
-<!--            <picture>-->
-<!--              <source srcset="/github.webp" type="image/webp" />-->
-<!--              <img src="/github.png" alt="GitHub" />-->
-<!--            </picture>-->
-<!--          </a>-->
-<!--          <a-->
-<!--            href="https://www.youtube.com/user/tokyo/videos"-->
-<!--            target="_blank"-->
-<!--            rel="noopener noreferrer"-->
-<!--            class="SideNavigation-SocialLink"-->
-<!--          >-->
-<!--            <picture>-->
-<!--              <source srcset="/youtube.webp" type="image/webp" />-->
-<!--              <img src="/youtube.png" alt="YouTube" />-->
-<!--            </picture>-->
-<!--          </a>-->
+          <!--          <a-->
+          <!--            href="https://line.me/R/ti/p/%40822sysfc"-->
+          <!--            target="_blank"-->
+          <!--            rel="noopener noreferrer"-->
+          <!--            class="SideNavigation-SocialLink"-->
+          <!--          >-->
+          <!--            <picture>-->
+          <!--              <source srcset="/line.webp" type="image/webp" />-->
+          <!--              <img src="/line.png" alt="LINE" />-->
+          <!--            </picture>-->
+          <!--          </a>-->
+          <!--          <a-->
+          <!--            href="https://twitter.com/tokyo_bousai"-->
+          <!--            target="_blank"-->
+          <!--            rel="noopener noreferrer"-->
+          <!--            class="SideNavigation-SocialLink"-->
+          <!--          >-->
+          <!--            <picture>-->
+          <!--              <source srcset="/twitter.webp" type="image/webp" />-->
+          <!--              <img src="/twitter.png" alt="Twitter" />-->
+          <!--            </picture>-->
+          <!--          </a>-->
+          <!--          <a-->
+          <!--            href="https://www.facebook.com/tochokoho"-->
+          <!--            target="_blank"-->
+          <!--            rel="noopener noreferrer"-->
+          <!--            class="SideNavigation-SocialLink"-->
+          <!--          >-->
+          <!--            <picture>-->
+          <!--              <source srcset="/facebook.webp" type="image/webp" />-->
+          <!--              <img src="/facebook.png" alt="Facebook" />-->
+          <!--            </picture>-->
+          <!--          </a>-->
+          <!--          <a-->
+          <!--            href="https://github.com/tokyo-metropolitan-gov/covid19"-->
+          <!--            target="_blank"-->
+          <!--            rel="noopener noreferrer"-->
+          <!--            class="SideNavigation-SocialLink"-->
+          <!--          >-->
+          <!--            <picture>-->
+          <!--              <source srcset="/github.webp" type="image/webp" />-->
+          <!--              <img src="/github.png" alt="GitHub" />-->
+          <!--            </picture>-->
+          <!--          </a>-->
+          <!--          <a-->
+          <!--            href="https://www.youtube.com/user/tokyo/videos"-->
+          <!--            target="_blank"-->
+          <!--            rel="noopener noreferrer"-->
+          <!--            class="SideNavigation-SocialLink"-->
+          <!--          >-->
+          <!--            <picture>-->
+          <!--              <source srcset="/youtube.webp" type="image/webp" />-->
+          <!--              <img src="/youtube.png" alt="YouTube" />-->
+          <!--            </picture>-->
+          <!--          </a>-->
 
           <a
             href="https://www.facebook.com/stopcovid19yamaguchi/"
@@ -224,8 +224,8 @@ export default Vue.extend({
         {
           icon: 'mdi-account-multiple',
           title: this.$t('山口県民の皆様へ'),
-          link: 'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280002.html#1'
-
+          link:
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280002.html#1'
         },
         {
           icon: 'ParentIcon',
@@ -235,19 +235,23 @@ export default Vue.extend({
         {
           icon: 'mdi-domain',
           title: this.$t('企業の皆様・はたらく皆様へ'),
-          link: 'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280003.html#1',
+          link:
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280003.html#1'
         },
         {
           title: this.$t('医療機関の皆さまへ'),
-          link: 'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280005.html#1',
+          link:
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280005.html#1'
         },
         {
           title: this.$t('山口県の対策'),
-          link: 'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280006.html#1',
+          link:
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280006.html#1'
         },
         {
           title: this.$t('県内各市町の対策'),
-          link: 'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280007.html#1',
+          link:
+            'https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202005280007.html#1',
           divider: true
         },
         // {
@@ -259,23 +263,23 @@ export default Vue.extend({
         //   title: this.$t('東京都 新型コロナウイルス感染症 支援情報ナビ'),
         //   link: 'https://covid19.supportnavi.metro.tokyo.lg.jp/'
         // },
-        //{
+        // {
         //  title: this.$t('東京都主催等 中止又は延期するイベント等'),
         //  link:
         //    'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/202002250001.html'
-        //},
+        // },
         // {
         //   title: this.$t('東京都における滞在人口の増減'),
         //   link:
         //     'https://www.seisakukikaku.metro.tokyo.lg.jp/information/corona-people-flow-analysis.html'
         // },
-        //{
+        // {
         //  title: this.$t(
         //    '新型コロナウイルス発生に伴う県有施設等の休館等について'
         //  ),
         //  link:
         //    'https://www.pref.yamaguchi.lg.jp/cms/a15200/kansensyou/202002280001.html'
-        //},
+        // },
         {
           title: this.$t('知事からのメッセージ'),
           link:
@@ -307,12 +311,12 @@ export default Vue.extend({
         {
           icon: 'LineIcon',
           title: this.$t('山口県新型コロナウイルス感染症対策本部 公式LINE'),
-          link: 'https://lin.ee/x22fTp5',
+          link: 'https://lin.ee/x22fTp5'
         },
         {
           icon: 'TwitterIcon',
           title: this.$t('山口県新型コロナウイルス感染症対策本部 公式twitter'),
-          link: 'https://twitter.com/CoronaYamaguchi',
+          link: 'https://twitter.com/CoronaYamaguchi'
         },
         {
           icon: 'YoutubeIcon',
