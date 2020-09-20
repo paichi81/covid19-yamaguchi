@@ -16,7 +16,7 @@
 
 <script>
 import dayjs from 'dayjs'
-//import Data from '@/data/data.json'
+// import Data from '@/data/data.json'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import SvgCard from '@/components/SvgCard.vue'
 import ConfirmedCasesDetailsTable from '@/components/ConfirmedCasesDetailsTable.vue'
@@ -34,14 +34,14 @@ export default {
     // 検査陽性者の状況
     const confirmedCases = formatConfirmedCases(Hospitalizations.data[0])
 
-    //const updatedAt = dayjs(Data.main_summary.children[0].date).format(
+    // const updatedAt = dayjs(Data.main_summary.children[0].date).format(
     //  'YYYY/MM/DD HH:mm'
-    //)
+    // )
 
     const data = {
       Hospitalizations,
-      confirmedCases,
-      //updatedAt
+      confirmedCases
+      // updatedAt
     }
     return data
   }

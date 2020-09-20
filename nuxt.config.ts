@@ -35,7 +35,7 @@ const config: Configuration = {
       'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/querents.json',
     mapupdateUrl:
       process.env.QUERENTS_URL ||
-      'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/map_update.json',
+      'https://nishidayoshikatsu.github.io/covid19-yamaguchi-opendata/map_update.json'
   },
   /*
    ** Headers of the page
@@ -134,7 +134,7 @@ const config: Configuration = {
     'nuxt-purgecss',
     '@nuxtjs/axios',
     ['vue-scrollto/nuxt', { duration: 1000, offset: -72 }],
-    'nuxt-client-init-module',
+    'nuxt-client-init-module'
   ],
   /*
    ** Axios module configuration
