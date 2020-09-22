@@ -89,6 +89,7 @@
             }}</span>
           </li>
         </ul>
+        <!--
         <div :class="[$style.box, $style.bgGray]">
           <h5 :class="$style.sxnHeading">
             {{ $t('新型コロナ受診相談窓口は、24時間対応しています') }}
@@ -121,10 +122,11 @@
             </div>
           </dl>
         </div>
+        -->
         <p :class="[$style.sxnText, $style.hr]">
           {{
             $t(
-              '上記の症状に当てはまらない方は、新型コロナコールセンターにご相談ください。'
+              '上記の症状に当てはまるかどうかに関わらず、山口県新型コロナウイルス感染症専用相談ダイアルにご相談ください。'
             )
           }}
         </p>
@@ -132,16 +134,16 @@
           <h5 :class="$style.boxHeading">
             {{
               $t(
-                '新型コロナコールセンター（対応言語：日本語・英語・中国語・韓国語）'
+                '山口県新型コロナウイルス感染症専用相談ダイアル'
               )
             }}
           </h5>
           <dl :class="$style.contact">
-            <dt>{{ $t('午前9時から午後10時（土日祝含む）') }}</dt>
+            <dt>{{ $t('毎日24時間対応') }}</dt>
             <dd>
               <a :class="$style.tel" href="tel:0570-550571">
                 <icon-phone :class="$style.icon" aria-hidden="true" />
-                0570-550571</a
+                083-902-2510</a
               >
             </dd>
           </dl>
@@ -159,22 +161,22 @@
           {{ $t('軽い症状があり、不安のある方') }}
         </h4>
         <p :class="$style.sxnText">
-          {{ $t('下記、新型コロナコールセンターにご相談ください。') }}
+          {{ $t('下記、山口県新型コロナウイルス感染症専用相談ダイアルにご相談ください。') }}
         </p>
         <div :class="[$style.box, $style.bgGray]">
           <h5 :class="$style.boxHeading">
             {{
               $t(
-                '新型コロナコールセンター（対応言語：日本語・英語・中国語・韓国語）'
+                '山口県新型コロナウイルス感染症専用相談ダイアル'
               )
             }}
           </h5>
           <dl :class="$style.contact">
-            <dt>{{ $t('午前9時から午後10時（土日祝含む）') }}</dt>
+            <dt>{{ $t('毎日24時間対応') }}</dt>
             <dd>
               <a :class="$style.tel" href="tel:0570-550571">
                 <icon-phone :class="$style.icon" aria-hidden="true" />
-                0570-550571</a
+                083-902-2510</a
               >
             </dd>
           </dl>
@@ -191,7 +193,7 @@
         <h4 :class="$style.sxnHeadingSmall">
           {{
             $t(
-              '新型コロナ受診相談窓口、またはかかりつけ医によって新型コロナ外来（帰国者・接触者外来）の受診が必要だと判断された方'
+              '山口県新型コロナウイルス感染症専用相談ダイアル、またはかかりつけ医によって新型コロナ外来（帰国者・接触者外来）の受診が必要だと判断された方'
             )
           }}
         </h4>
@@ -246,7 +248,7 @@
     </div>
     <div :class="$style.detail">
       <a
-        href="https://www.pref.yamaguchi.lg.jp/cms/a11000/sodan/koronasoudan.html"
+        href="https://www.pref.yamaguchi.lg.jp/cms/a10000/korona2020/202004240002.html"
         target="_blank"
         :class="$style.detailButton"
         rel="noopener noreferrer"
