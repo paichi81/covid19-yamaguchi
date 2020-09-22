@@ -62,7 +62,7 @@ import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
 import CardRow from '@/components/cards/CardRow.vue'
 // import Data from '@/data/data.json'
-import News from '@/data/news.json'
+// import News from '@/data/news.json'
 import PatientsCnt from '@/data/patients_cnt.json'
 import Patients from '@/data/patients.json'
 import Inspections from '@/data/inspections.json'
@@ -84,7 +84,7 @@ import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDe
 // import AgencyCard from '@/components/cards/AgencyCard.vue'
 // import PositiveNumberByDiagnosedDateCard from '@/components/cards/PositiveNumberByDiagnosedDateCard.vue'
 import YamaguchiMapCard from '@/components/cards/YamaguchiMapCard.vue'
-import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
+// import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
 export default Vue.extend({
   components: {
