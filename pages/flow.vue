@@ -134,11 +134,7 @@
         </p>
         <div :class="[$style.box, $style.bgGray]">
           <h5 :class="$style.boxHeading">
-            {{
-              $t(
-                '山口県新型コロナウイルス感染症専用相談ダイアル'
-              )
-            }}
+            {{ $t('山口県新型コロナウイルス感染症専用相談ダイアル') }}
           </h5>
           <dl :class="$style.contact">
             <dt>{{ $t('毎日24時間対応') }}</dt>
@@ -163,15 +159,15 @@
           {{ $t('軽い症状があり、不安のある方') }}
         </h4>
         <p :class="$style.sxnText">
-          {{ $t('下記、山口県新型コロナウイルス感染症専用相談ダイアルにご相談ください。') }}
+          {{
+            $t(
+              '下記、山口県新型コロナウイルス感染症専用相談ダイアルにご相談ください。'
+            )
+          }}
         </p>
         <div :class="[$style.box, $style.bgGray]">
           <h5 :class="$style.boxHeading">
-            {{
-              $t(
-                '山口県新型コロナウイルス感染症専用相談ダイアル'
-              )
-            }}
+            {{ $t('山口県新型コロナウイルス感染症専用相談ダイアル') }}
           </h5>
           <dl :class="$style.contact">
             <dt>{{ $t('毎日24時間対応') }}</dt>
@@ -268,9 +264,9 @@ import Vue from 'vue'
 import { TranslateResult } from 'vue-i18n'
 import VueScrollTo from 'vue-scrollto'
 import CovidIcon from '@/static/covid.svg'
-import PrinterButton from '@/components/PrinterButton.vue'
+// import PrinterButton from '@/components/PrinterButton.vue'
 import PageHeader from '@/components/PageHeader.vue'
-import ExternalLink from '@/components/ExternalLink.vue'
+// import ExternalLink from '@/components/ExternalLink.vue'
 import FigCondSyDr from '@/static/flow/cond_sydr.svg'
 import FigCondSy from '@/static/flow/cond_sy.svg'
 import FigCondAnx from '@/static/flow/cond_anx.svg'
@@ -296,9 +292,9 @@ type LocalData = {
 export default Vue.extend({
   components: {
     CovidIcon,
-    PrinterButton,
+    // PrinterButton,
     PageHeader,
-    ExternalLink,
+    // ExternalLink,
     FigCondSyDr,
     FigCondSy,
     FigCondAnx,

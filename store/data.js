@@ -24,6 +24,7 @@ export const state = () => ({
 export const mutations = {
   getData(state, payload) {
     // state.data = payload.data,
+    // eslint-disable-next-line no-sequences,no-unused-expressions
     ;(state.lastupdate = payload.lastupdate),
       (state.news = payload.news),
       (state.patientscnt = payload.patientscnt),

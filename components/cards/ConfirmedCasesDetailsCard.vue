@@ -15,18 +15,18 @@
 </template>
 
 <script>
-import dayjs from 'dayjs'
+// import dayjs from 'dayjs'
 // import Data from '@/data/data.json'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import SvgCard from '@/components/SvgCard.vue'
 import ConfirmedCasesDetailsTable from '@/components/ConfirmedCasesDetailsTable.vue'
-import OpenDataLink from '@/components/OpenDataLink.vue'
+// import OpenDataLink from '@/components/OpenDataLink.vue'
 
 export default {
   components: {
     SvgCard,
-    ConfirmedCasesDetailsTable,
-    OpenDataLink
+    ConfirmedCasesDetailsTable
+    // OpenDataLink
   },
   data() {
     const Hospitalizations = this.$store.state.data.hospitalizations
