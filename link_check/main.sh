@@ -1,3 +1,5 @@
+source setting.sh
+
 function url_extract(){
 	grep -oP $1 -e "http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?"
 }
@@ -33,21 +35,47 @@ function link_check(){
 }
 
 function link_check_all(){
+	result=0
 	for url in $(cat /dev/stdin)
 	do
 		if ! link_check $url 1>/dev/null;then
 			echo $url
+			result=1
 		fi
 	done
+	return $result
 }
 
 function broken_link_test(){
 	DOMAIN_NAME=$1
 	wget -r -np --random-wait -x https://$DOMAIN_NAME --directory-prefix=downloaded_pages 1>/dev/null 2>/dev/null
 	url_extract_all ./downloaded_pages/$DOMAIN_NAME | link_check_all
+	result=$?
 	rm -rf downloaded_pages
+	return $result
 }
 
-function main(){
-	broken_link_test yamaguchi.stopcovid19.jp
+function send_message(){
+	MESSAGE=$(cat /dev/stdin | sed -e 's/"/\\\"/g')
+	HOOK_URL=$1
+	curl \
+		-X POST\
+		-H 'Content-type: application/json'\
+		--data "{\"text\":\"$MESSAGE\"}"\
+		$HOOK_URL
 }
+
+#====MAIN======
+if [ "$HOOK_URL" == "" ]; then
+	echo "ERROR: HOOK_URL is empty."
+	echo "Please create slack incoming webhook and assign its url to HOOK_URL in setting.sh."
+	exit 1;
+fi
+if ! broken_links=$(broken_link_test $TARGET_DOMAIN); then
+	send_message $HOOK_URL << EOS
+WARNING: Broken link detected!!
+~~~~~Broken link list~~~~~~~~~
+$broken_links
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+EOS
+fi
