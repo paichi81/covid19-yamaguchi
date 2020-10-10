@@ -518,7 +518,7 @@ $margin: 20;
   }
   > .anchorLead {
     margin-top: $margin * 1.5px;
-    color: $green-1;
+    color: $main-color;
     font-weight: bold;
     text-align: center;
     @include font-size($fzHuge);
@@ -554,7 +554,7 @@ $margin: 20;
     position: relative;
     padding: 20px 20px 40px;
     width: 100%;
-    border: 4px solid $green-1;
+    border: 4px solid $main-color;
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
@@ -592,12 +592,12 @@ $margin: 20;
       height: 0;
       border-width: 9.5px 6.3px 0 6.3px;
       border-style: solid;
-      border-color: $green-1 transparent transparent transparent;
+      border-color: $main-color transparent transparent transparent;
       transition: border-color 0.2s;
     }
     &.active,
     &:hover {
-      background-color: $green-1;
+      background-color: $main-color;
       color: $white;
       > svg path {
         fill: $white;
@@ -816,13 +816,13 @@ $margin: 20;
     margin: ($margin * 1.5px) auto 0;
     font-weight: bold;
     text-decoration: none;
-    color: $green-1 !important;
+    color: $main-color !important;
     &:hover {
       color: $white !important;
     }
     > .icon {
       margin-left: 2px;
-      color: $green-1 !important;
+      color: $main-color !important;
     }
   }
 }
