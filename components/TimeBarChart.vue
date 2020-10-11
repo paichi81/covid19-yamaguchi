@@ -166,7 +166,8 @@ const options: ThisTypedComponentOptionsWithRecordProps<
     },
     showButton: {
       type: Boolean,
-      default: false
+      required: false,
+      default: true
     }
   },
   data: () => ({
