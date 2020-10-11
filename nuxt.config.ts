@@ -195,7 +195,7 @@ const config: Configuration = {
   },
   manifest: {
     name: '山口県公認 新型コロナウイルス感染症対策サイト',
-    theme_color: '#00a040',
+    theme_color: '#00a63c',
     background_color: '#ffffff',
     display: 'standalone',
     Scope: '/',

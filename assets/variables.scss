@@ -12,6 +12,7 @@ $gray-5: #f8f9fa;
 $white: #fff;
 $link: #006ca8;
 $emergency: #f29739; // original: #FFE200;
+$main-color: $green-1; // main color
 
 // ==================
 // shadow
@@ -112,12 +113,12 @@ $z-index-map: (
   display: inline-block;
   border-radius: 4px;
   background-color: $white;
-  border: 1px solid $green-1;
-  color: $green-1;
+  border: 1px solid $main-color;
+  color: $main-color;
   cursor: pointer;
 
   &:hover {
-    background-color: $green-1;
+    background-color: $main-color;
     color: $white;
 
     > i {
