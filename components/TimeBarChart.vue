@@ -85,6 +85,10 @@ type Props = {
   byDate: boolean
 }
 
+class TableHeader {}
+
+class TableItem {}
+
 type Computed = {
   displayInfo: {
     lText: string
@@ -99,6 +103,8 @@ type Computed = {
   tableHeaders: TableHeader[]
   tableData: TableItem[]
 }
+
+class Methods {}
 
 const options: ThisTypedComponentOptionsWithRecordProps<
   Vue,
@@ -204,7 +210,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
       const transparentWhite = 'rgba(255,255,255,0)'
       if (this.dataKind === 'transition') {
         return {
-          labels: this.chartData.map(d => {
+          labels: this.chartData.map((d: { label: any }) => {
             return d.label
           }),
           datasets: [
