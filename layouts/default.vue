@@ -3,7 +3,7 @@
     <v-overlay v-if="loading" color="#F8F9FA" opacity="1" z-index="9999">
       <div class="loader">
         <img src="/logo.svg" alt="山口県" />
-        <scale-loader color="#00A040" />
+        <scale-loader color="#00a63c" />
       </div>
     </v-overlay>
     <div v-if="hasNavigation" class="appContainer">
