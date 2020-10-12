@@ -34,9 +34,7 @@
       </div>
       <div v-if="stateOfTwitter">
         <span class="WhatsNew-link-to-twitter">
-          <external-link
-            url="https://twitter.com/CoronaYamaguchi"
-          >
+          <external-link url="https://twitter.com/CoronaYamaguchi">
             <v-icon size="2rem" class="TwitterIcon">
               mdi-twitter
             </v-icon>
@@ -203,7 +201,7 @@ export default Vue.extend({
         //border: medium solid black;
         //align-self: center;
       }
-      .TwitterIcon{
+      .TwitterIcon {
         color: $white !important;
       }
       background-color: $twitter;
@@ -216,7 +214,7 @@ export default Vue.extend({
         background-color: $white;
         border-radius: 4px;
       }
-      .ExternalLinkIcon{
+      .ExternalLinkIcon {
         color: $white !important;
       }
       .ExternalLink {
@@ -224,16 +222,15 @@ export default Vue.extend({
         text-decoration: none;
         margin: -10px;
         padding: 10px;
-        &:hover{
-          color: $gray-2 !important;
-          .TwitterIcon{
-            color: $gray-2 !important;
+        &:hover {
+          color: $twitter-gray !important;
+          .TwitterIcon {
+            color: $twitter-gray !important;
           }
-          .ExternalLinkIcon{
+          .ExternalLinkIcon {
             color: $gray-2 !important;
           }
         }
-        
       }
 
       > span {
