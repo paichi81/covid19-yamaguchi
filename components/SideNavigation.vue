@@ -193,7 +193,12 @@ export default Vue.extend({
         {
           icon: 'CovidIcon',
           title: this.$t('新型コロナウイルス感染症が心配なときに'),
-          link: this.localePath('/flow'),
+          link: this.localePath('/flow')
+        },
+        {
+          icon: 'FoodIcon',
+          title: this.$t('県内Go To Eat情報'),
+          link: 'https://gotoeat-yamaguchi.com/use/',
           divider: true
         },
         {
