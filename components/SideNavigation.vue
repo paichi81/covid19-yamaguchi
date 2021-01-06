@@ -202,7 +202,7 @@ export default Vue.extend({
         },
         {
           icon: 'MaskTrashIcon',
-          title: this.$t('家庭でのマスクの捨て方'),
+          title: this.$t('ご家庭でのマスク等の捨て方'),
           link: 'https://www.kankyo.metro.tokyo.lg.jp/resource/500200a20200221162304660.files/200327_chirashi.pdf',
           divider: true
         },
