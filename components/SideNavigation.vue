@@ -199,6 +199,11 @@ export default Vue.extend({
           icon: 'FoodIcon',
           title: this.$t('県内Go To Eat情報'),
           link: 'https://gotoeat-yamaguchi.com/use/',
+        },
+        {
+          icon: 'MaskTrashIcon',
+          title: this.$t('家庭でのマスクの捨て方'),
+          link: 'https://www.kankyo.metro.tokyo.lg.jp/resource/500200a20200221162304660.files/200327_chirashi.pdf',
           divider: true
         },
         {
