@@ -85,9 +85,9 @@ export default Vue.extend({
             },
             {
               title: this.$t('広島県'),
-              subtitle: this.$t(''),
+              subtitle: this.$t('公式'),
               isOfficial: true,
-              link: 'https://covid19-hiroshima.netlify.app/'
+              link: 'https://hiroshima.stopcovid19.jp/'
             },
             {
               title: this.$t('広島市'),
@@ -163,8 +163,8 @@ export default Vue.extend({
             },
             {
               title: this.$t('茨城県'),
-              subtitle: this.$t(''),
-              isOfficial: false,
+              subtitle: this.$t('公認'),
+              isOfficial: true,
               link: 'https://ibaraki.stopcovid19.jp/'
             },
             {
@@ -193,8 +193,8 @@ export default Vue.extend({
             },
             {
               title: this.$t('岐阜県'),
-              subtitle: this.$t(''),
-              isOfficial: false,
+              subtitle: this.$t('公認'),
+              isOfficial: true,
               link: 'https://covid19-gifu.netlify.app/'
             },
             {
@@ -214,12 +214,6 @@ export default Vue.extend({
         {
           title: this.$t('その他都道府県'),
           items: [
-            {
-              title: this.$t('全国'),
-              subtitle: this.$t(''),
-              isOfficial: false,
-              link: 'https://covid19.wlaboratory.com/'
-            },
             {
               title: this.$t('青森県'),
               subtitle: this.$t('公式'),
