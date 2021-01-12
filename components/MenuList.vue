@@ -37,7 +37,6 @@ import FacebookIcon from '@/static/facebook.svg'
 import LineIcon from '@/static/line.svg'
 import TwitterIcon from '@/static/twitter.svg'
 import YoutubeIcon from '@/static/youtube.svg'
-import FoodIcon from '@/static/food.svg'
 
 type MenuItem = {
   icon?: string
@@ -54,8 +53,7 @@ export default Vue.extend({
     FacebookIcon,
     LineIcon,
     TwitterIcon,
-    YoutubeIcon,
-    FoodIcon
+    YoutubeIcon
   },
   props: {
     items: {
